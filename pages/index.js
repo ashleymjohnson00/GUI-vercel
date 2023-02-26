@@ -69,7 +69,7 @@ const Home = (props) => {
               <div className="home-container10">
                 <div className="home-container11">
                   <span className="home-text2">Camera Location:</span>
-                  <span className="home-text3">Lobby</span>
+                  <span className="home-text3">Hallway</span>
                 </div>
                 <div className="home-container12">
                   <span className="home-text4">00:00:00 00/00/00</span>
