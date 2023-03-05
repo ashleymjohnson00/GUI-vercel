@@ -39,6 +39,9 @@ const Home = (props) => {
         <div id="Updates-Sidebar" className="home-sidebar">
           <div className="home-container03">
             <h1 className="home-text">Updates</h1>
+            <svg viewBox="0 0 877.7142857142857 1024" className="home-icon">
+              <path d="M731.429 548.571v-73.143c0-20-16.571-36.571-36.571-36.571h-286.857l108-108c6.857-6.857 10.857-16 10.857-25.714s-4-18.857-10.857-25.714l-52-52c-6.857-6.857-16-10.286-25.714-10.286s-18.857 3.429-25.714 10.286l-258.857 258.857c-6.857 6.857-10.286 16-10.286 25.714s3.429 18.857 10.286 25.714l258.857 258.857c6.857 6.857 16 10.286 25.714 10.286s18.857-3.429 25.714-10.286l52-52c6.857-6.857 10.286-16 10.286-25.714s-3.429-18.857-10.286-25.714l-108-108h286.857c20 0 36.571-16.571 36.571-36.571zM877.714 512c0 242.286-196.571 438.857-438.857 438.857s-438.857-196.571-438.857-438.857 196.571-438.857 438.857-438.857 438.857 196.571 438.857 438.857z"></path>
+            </svg>
           </div>
         </div>
         <div className="home-container04">
@@ -49,10 +52,19 @@ const Home = (props) => {
             className="home-iframe"
           ></iframe>
           <div className="home-container05">
-            <div className="home-container06"></div>
+            <div className="home-container06">
+              <span className="home-text01">
+                <span className="home-text02">Confidence Interval</span>
+                <br></br>
+              </span>
+              <span className="home-text04">
+                <span className="home-text05">41</span>
+                <br></br>
+              </span>
+            </div>
             <div className="home-container07">
               <div className="home-container08">
-                <span className="home-text1">Camera Controls</span>
+                <span className="home-text07">Camera Controls</span>
                 <div className="home-container09">
                   <img
                     alt="image"
@@ -68,11 +80,11 @@ const Home = (props) => {
               </div>
               <div className="home-container10">
                 <div className="home-container11">
-                  <span className="home-text2">Camera Location:</span>
-                  <span className="home-text3">Hallway</span>
+                  <span className="home-text08">Camera Location:</span>
+                  <span className="home-text09">Lobby</span>
                 </div>
                 <div className="home-container12">
-                  <span className="home-text4">00:00:00 00/00/00</span>
+                  <span className="home-text10">00:00:00 00/00/00</span>
                 </div>
               </div>
             </div>
@@ -86,7 +98,7 @@ const Home = (props) => {
             >
               Contact Authorities
             </a>
-            <span className="home-text5">
+            <span className="home-text11">
               If the AI detects a firearm, our system will alert the security
               team through the preferred contact method as well as send the
               alert to the updates tab to the right. If an alert of a possible
@@ -99,7 +111,7 @@ const Home = (props) => {
           </div>
         </div>
         <footer className="home-footer">
-          <span className="home-text6">Website created by BAJA Security</span>
+          <span className="home-text12">Website created by BAJA Security</span>
           <img
             alt="image"
             src="/playground_assets/asset%202%403x-200h.png"
@@ -276,7 +288,7 @@ const Home = (props) => {
             display: flex;
             position: relative;
             align-items: center;
-            justify-content: flex-end;
+            justify-content: flex-start;
             background-color: #064d66;
           }
           .home-text {
@@ -295,6 +307,13 @@ const Home = (props) => {
             letter-spacing: 2.1px;
             text-transform: uppercase;
             text-decoration: none;
+          }
+          .home-icon {
+            top: 14px;
+            left: var(--dl-space-space-twounits);
+            width: 40px;
+            height: 40px;
+            position: absolute;
           }
           .home-container04 {
             top: 0px;
@@ -332,14 +351,41 @@ const Home = (props) => {
           .home-container06 {
             flex: 0 0 auto;
             width: 216px;
-            border: 2px dashed rgba(120, 120, 120, 0.4);
             height: 184px;
             display: flex;
+            position: relative;
             margin-top: var(--dl-space-space-twounits);
-            align-items: flex-start;
+            align-items: center;
             margin-left: var(--dl-space-space-oneandhalfunits);
             margin-right: var(--dl-space-space-threeunits);
             border-radius: var(--dl-radius-radius-radius8);
+            flex-direction: column;
+            justify-content: center;
+            background-color: #075874;
+          }
+          .home-text01 {
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            margin: auto;
+            position: absolute;
+            font-size: 20px;
+            align-self: flex-start;
+            text-align: center;
+            padding-top: var(--dl-space-space-oneandhalfunits);
+          }
+          .home-text02 {
+            color: var(--dl-color-gray-white);
+          }
+          .home-text04 {
+            font-size: 48px;
+            margin-top: var(--dl-space-space-twounits);
+            font-family: Industry Inc Base;
+          }
+          .home-text05 {
+            color: var(--dl-color-logocolors-lightblue3);
+            font-size: 48px;
+            font-family: Industry Inc Base;
           }
           .home-container07 {
             flex: 0 0 auto;
@@ -363,7 +409,7 @@ const Home = (props) => {
             justify-content: flex-start;
             background-color: #075874;
           }
-          .home-text1 {
+          .home-text07 {
             color: var(--dl-color-gray-white);
             font-size: 20px;
             margin-top: var(--dl-space-space-oneandhalfunits);
@@ -410,11 +456,11 @@ const Home = (props) => {
             justify-content: center;
             background-color: #075874;
           }
-          .home-text2 {
+          .home-text08 {
             color: var(--dl-color-gray-white);
             font-size: 23px;
           }
-          .home-text3 {
+          .home-text09 {
             color: var(--dl-color-logocolors-lightblue3);
             font-size: 21px;
             margin-top: var(--dl-space-space-halfunit);
@@ -429,7 +475,7 @@ const Home = (props) => {
             justify-content: center;
             background-color: #075874;
           }
-          .home-text4 {
+          .home-text10 {
             color: var(--dl-color-gray-white);
             font-size: 20px;
           }
@@ -463,7 +509,7 @@ const Home = (props) => {
             text-decoration: none;
             background-color: var(--dl-color-logocolors-lightred);
           }
-          .home-text5 {
+          .home-text11 {
             color: var(--dl-color-logocolors-lightblue3);
             margin-top: var(--dl-space-space-twounits);
             text-align: center;
@@ -498,7 +544,7 @@ const Home = (props) => {
               padding-left: var(--dl-space-space-twounits);
               padding-right: var(--dl-space-space-twounits);
             }
-            .home-text6 {
+            .home-text12 {
               text-align: center;
               margin-left: var(--dl-space-space-unit);
               margin-right: var(--dl-space-space-unit);
@@ -509,7 +555,7 @@ const Home = (props) => {
               padding: var(--dl-space-space-unit);
               flex-direction: column;
             }
-            .home-text6 {
+            .home-text12 {
               margin-left: 0px;
               margin-right: 0px;
               margin-bottom: var(--dl-space-space-unit);
