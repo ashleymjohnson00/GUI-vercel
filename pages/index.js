@@ -358,7 +358,7 @@ const Home = (props) => {
             border-radius: var(--dl-radius-radius-radius8);
             flex-direction: column;
             justify-content: center;
-            background-color: var(--dl-color-logocolors-lightblue1);
+            background-color: #075874;
           }
           .home-text01 {
             top: 0px;
