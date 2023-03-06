@@ -1,8 +1,34 @@
 import React from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
+import axios from 'axios';
 
 const NewUser = (props) => {
+  require('dotenv').config();
+  const mongokey = process.env.MONGO_API;
+
+  async function createAccount(){
+    const username = document.querySelector("[name=username]").value.toString()
+    const password = document.querySelector("[name=password]").value.toString()
+
+    axios.post('https://us-east-2.aws.data.mongodb-api.com/app/data-mkrnx/endpoint/data/v1/action/insertOne', 
+    {
+      collection: "loginCredentials", database: "BAJAsecDB", dataSource: 'Cluster0',
+      document: {
+        user: username,
+        password: password,
+      },
+    },
+    {
+      "Content-Type" : "application/json",
+      "api-key": mongokey,
+    }
+    ).catch((error) => {console.log("failed")
+  })
+  let displaysuccess = "Account Created Succesfully"
+  document.getElementById("displayresultSuccess").innerHTML = displaysuccess
+
+  }
   return (
     <>
       <div className="new-user-container">
@@ -41,7 +67,7 @@ const NewUser = (props) => {
           <input
             type="password"
             id="newUserpassword"
-            name="password"
+            name="confirmpassword"
             required
             maxlength="20"
             minlength="6"
@@ -49,9 +75,10 @@ const NewUser = (props) => {
             autoComplete="new-password"
             className="new-user-textinput2 input"
           />
-          <Link href="/landing" id="Navigation" name="newUsersubmit">
-            <a className="new-user-link">Submit</a>
-          </Link>
+          <button  id="Navigation" name="newUsersubmit">
+            <a onClick={createAccount} href="/" className="new-user-link">Submit</a>
+          </button>
+          <h1 id="displayresultSuccess"></h1>
         </div>
       </div>
       <style jsx>
