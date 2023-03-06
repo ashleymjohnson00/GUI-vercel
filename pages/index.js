@@ -380,7 +380,7 @@ const Home = (props) => {
             font-family: Industry Inc Base;
           }
           .home-text05 {
-            color: var(--dl-color-gray-white);
+            color: var(--dl-color-logocolors-lightblue3);
             font-size: 48px;
             font-family: Industry Inc Base;
           }
