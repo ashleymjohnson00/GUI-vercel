@@ -5,7 +5,7 @@ import axios from 'axios';
 
 const NewUser = (props) => {
   require('dotenv').config();
-  const mongokey = process.env.MONGO_API;
+  const mongokey = process.env.MONGODB_API;
 
   async function createAccount(){
     const username = document.querySelector("[name=username]").value.toString()

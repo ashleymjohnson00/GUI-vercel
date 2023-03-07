@@ -3,43 +3,10 @@ import Link from 'next/link'
 import Head from 'next/head'
 import axios from 'axios'
 
-const Home = (props) => {
-  require('dotenv').config();
-  const mongokey = process.env.MONGO_API;
-  var displaysuccess;
-  async function verifyLogin(){
-    while(1){
-  
-    const confidenceInterval = axios.post('https://us-east-2.aws.data.mongodb-api.com/app/data-mkrnx/endpoint/data/v1/action/findOne', 
-    {
-      collection: "ThreatConfidence", database: "BAJAsecDB", dataSource: 'Cluster0',
-      filter: {
-        user: username,
-        password: password,
-      },
-    },
-    {
-      "Content-Type" : "application/json",
-      "api-key": mongokey,
-    }
-    ).catch((error) => {console.log("failed")
-  })
-  try{
-  let fromoutput = await output.catch((error) => {console.log("error")})
-  let verifyUsername = fromoutput.data.document.username
-  let verifyPassword = fromoutput.data.document.password;
-  displaysuccess = "User logged in"
-  document.location.href = "/home"
-  }
-  catch(err){
-    displaysuccess = "login failed"
 
-    
-  }
-  
-  document.getElementById("displayresult").innerHTML = displaysuccess
-    }
-  }
+
+const Home = (props) => {
+
   return (
     <>
       <main className="home-container">
@@ -92,7 +59,7 @@ const Home = (props) => {
                 <br></br>
               </span>
               <span className="home-text04">
-                <span id="confidenceInterval" className="home-text05">41</span>
+                <span id="confidenceInterval" className="home-text05"></span>
                 <br></br>
               </span>
             </div>

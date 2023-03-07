@@ -21,6 +21,7 @@
     "net": false,
     "stream": false,
     "tls": false
+    
     },
   
 
@@ -92,10 +93,12 @@
     
 
   "react-dom": "^17.0.2"
+
   
 
   },
   
+ 
 
   "devDependencies": {
   
