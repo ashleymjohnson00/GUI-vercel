@@ -11,7 +11,7 @@ const Pdf1 = (props) => {
           <meta property="og:title" content="Pdf-1 - BAJA Security" />
         </Head>
         <header className="pdf1-container1">
-          <Link href="/">
+          <Link href="/home">
             <a className="pdf1-link">
               <img
                 id="logo"
@@ -22,7 +22,7 @@ const Pdf1 = (props) => {
             </a>
           </Link>
           <div className="pdf1-container2">
-            <Link href="/" id="homeNav" name="Home button">
+            <Link href="/home" id="homeNav" name="Home button">
               <a className="pdf1-link1 button heading2">Home</a>
             </Link>
             <Link href="/resources" id="resourcesNav" name="Resources button">

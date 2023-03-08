@@ -15,7 +15,7 @@ const Home = (props) => {
           <meta property="og:title" content="BAJA Security" />
         </Head>
         <header className="home-container01">
-          <Link href="/">
+          <Link href="/home">
             <a className="home-link">
               <img
                 id="logo"
@@ -26,7 +26,7 @@ const Home = (props) => {
             </a>
           </Link>
           <div className="home-container02">
-            <Link href="/" id="homeNav" name="Home button">
+            <Link href="/home" id="homeNav" name="Home button">
               <a className="home-link1">Home</a>
             </Link>
             <Link href="/resources" id="resourceNav" name="Resources button">
