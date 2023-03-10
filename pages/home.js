@@ -55,6 +55,7 @@ const Home = (props) => {
           <iframe
             src="https://www.youtube.com/embed/lwHnvO5QsDc"
             allow="autoplay"
+            modestbranding="1"
             allowFullScreen
             className="home-iframe"
           ></iframe>
