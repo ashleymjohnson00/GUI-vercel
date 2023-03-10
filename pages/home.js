@@ -3,16 +3,13 @@ import Link from 'next/link'
 import Head from 'next/head'
 import axios from 'axios'
 
-
-
 const Home = (props) => {
-
   return (
     <>
       <main className="home-container">
         <Head>
-          <title>BAJA Security</title>
-          <meta property="og:title" content="BAJA Security" />
+          <title>Home - BAJA Security</title>
+          <meta property="og:title" content="Home - BAJA Security" />
         </Head>
         <header className="home-container01">
           <Link href="/home">
@@ -54,28 +51,28 @@ const Home = (props) => {
             </span>
           </div>
         </div>
-        <div className="home-container04">
+        <div className="home-container05">
           <iframe
             src="https://www.youtube.com/embed/Wj3w9s2ecrM"
             allow="autoplay"
             allowFullScreen
             className="home-iframe"
           ></iframe>
-          <div className="home-container05">
-            <div className="home-container06">
-              <span className="home-text01">
-                <span className="home-text02">Confidence Interval</span>
+          <div className="home-container06">
+            <div className="home-container07">
+              <span className="home-text07">
+                <span className="home-text08">Confidence Interval</span>
                 <br></br>
               </span>
-              <span className="home-text04">
-                <span id="confidenceInterval" className="home-text05"></span>
+              <span className="home-text10">
+                <span className="home-text11">41</span>
                 <br></br>
               </span>
             </div>
-            <div className="home-container07">
-              <div className="home-container08">
-                <span className="home-text07">Camera Controls</span>
-                <div className="home-container09">
+            <div className="home-container08">
+              <div className="home-container09">
+                <span className="home-text13">Camera Controls</span>
+                <div className="home-container10">
                   <img
                     alt="image"
                     src="/playground_assets/triangle-left-svgrepo-com.svg"
@@ -88,18 +85,18 @@ const Home = (props) => {
                   />
                 </div>
               </div>
-              <div className="home-container10">
-                <div className="home-container11">
-                  <span className="home-text08">Camera Location:</span>
-                  <span className="home-text09">Lobby</span>
-                </div>
+              <div className="home-container11">
                 <div className="home-container12">
-                  <span className="home-text10">00:00:00 00/00/00</span>
+                  <span className="home-text14">Camera Location:</span>
+                  <span className="home-text15">Lobby</span>
+                </div>
+                <div className="home-container13">
+                  <span className="home-text16">00:00:00 00/00/00</span>
                 </div>
               </div>
             </div>
           </div>
-          <div className="home-container13">
+          <div className="home-container14">
             <a
               href="https://www.cstx.gov/departments___city_hall/police"
               target="_blank"
@@ -108,7 +105,7 @@ const Home = (props) => {
             >
               Contact Authorities
             </a>
-            <span className="home-text11">
+            <span className="home-text17">
               If the AI detects a firearm, our system will alert the security
               team through the preferred contact method as well as send the
               alert to the updates tab to the right. If an alert of a possible
@@ -121,7 +118,7 @@ const Home = (props) => {
           </div>
         </div>
         <footer className="home-footer">
-          <span className="home-text12">Website created by BAJA Security</span>
+          <span className="home-text18">Website created by BAJA Security</span>
           <img
             alt="image"
             src="/playground_assets/asset%202%403x-200h.png"
