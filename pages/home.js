@@ -53,7 +53,7 @@ const Home = (props) => {
         </div>
         <div className="home-container05">
           <iframe
-            src="https://www.youtube.com/embed/lwHnvO5QsDc?autoplay=1&modestbranding=1&origin=http://baja-security.com"
+            src="https://www.youtube.com/embed/lwHnvO5QsDc?autoplay=1&modestbranding=1&loop=1&rel=0&origin=http://baja-security.com"
             allow="autoplay"
             frameborder="0"
             allowFullScreen
