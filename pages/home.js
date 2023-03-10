@@ -44,6 +44,15 @@ const Home = (props) => {
           <div className="home-container03">
             <h1 className="home-text">Updates</h1>
           </div>
+          <div id="alert-container" className="home-container04 textarea">
+            <span className="home-text01">00/00/00 00:00:00</span>
+            <span className="home-text02">
+              <span>Threat Detected</span>
+              <br></br>
+              <span>Confidence Interval : 50%</span>
+              <br></br>
+            </span>
+          </div>
         </div>
         <div className="home-container04">
           <iframe
@@ -287,6 +296,7 @@ const Home = (props) => {
             width: 100%;
             height: 67px;
             display: flex;
+            z-index: 100;
             position: relative;
             align-items: center;
             justify-content: flex-start;
@@ -309,14 +319,49 @@ const Home = (props) => {
             text-transform: uppercase;
             text-decoration: none;
           }
-          .home-icon {
-            top: 14px;
-            left: var(--dl-space-space-twounits);
-            width: 40px;
-            height: 40px;
-            position: absolute;
-          }
           .home-container04 {
+            flex: 0 0 auto;
+            width: 92%;
+            height: 100px;
+            display: flex;
+            padding: var(--dl-space-space-halfunit);
+            position: relative;
+            margin-top: var(--dl-space-space-unit);
+            transition: 0.3s;
+            align-items: center;
+            margin-left: var(--dl-space-space-unit);
+            border-width: 0px;
+            margin-right: var(--dl-space-space-unit);
+            border-radius: var(--dl-radius-radius-radius8);
+            margin-bottom: var(--dl-space-space-unit);
+            flex-direction: column;
+            justify-content: flex-end;
+            background-color: var(--dl-color-logocolors-lightblue1);
+          }
+          .home-container04:hover {
+            box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.45);
+          }
+          .home-text01 {
+            top: 0px;
+            left: 0px;
+            color: var(--dl-color-logocolors-lightblue3);
+            right: 0px;
+            margin: var(--dl-space-space-halfunit);
+            position: absolute;
+            font-size: 18px;
+            text-align: center;
+          }
+          .home-text02 {
+            left: 0px;
+            color: var(--dl-color-logocolors-lightblue3);
+            right: 0px;
+            bottom: 0px;
+            margin: var(--dl-space-space-unit);
+            position: absolute;
+            font-size: 18px;
+            text-align: center;
+          }
+          .home-container05 {
             top: 0px;
             left: 0px;
             width: 75%;
@@ -341,7 +386,7 @@ const Home = (props) => {
             height: 50%;
             border-radius: var(--dl-radius-radius-radius8);
           }
-          .home-container05 {
+          .home-container06 {
             flex: 0 0 auto;
             width: 100%;
             height: 197px;
@@ -349,7 +394,7 @@ const Home = (props) => {
             align-items: flex-start;
             justify-content: center;
           }
-          .home-container06 {
+          .home-container07 {
             flex: 0 0 auto;
             width: 216px;
             height: 184px;
@@ -364,7 +409,7 @@ const Home = (props) => {
             justify-content: center;
             background-color: #075874;
           }
-          .home-text01 {
+          .home-text07 {
             top: 0px;
             left: 0px;
             right: 0px;
@@ -375,20 +420,20 @@ const Home = (props) => {
             text-align: center;
             padding-top: var(--dl-space-space-oneandhalfunits);
           }
-          .home-text02 {
+          .home-text08 {
             color: var(--dl-color-gray-white);
           }
-          .home-text04 {
+          .home-text10 {
             font-size: 48px;
             margin-top: var(--dl-space-space-twounits);
             font-family: Industry Inc Base;
           }
-          .home-text05 {
+          .home-text11 {
             color: var(--dl-color-logocolors-lightblue3);
             font-size: 48px;
             font-family: Industry Inc Base;
           }
-          .home-container07 {
+          .home-container08 {
             flex: 0 0 auto;
             width: auto;
             height: 197px;
@@ -396,7 +441,7 @@ const Home = (props) => {
             align-items: flex-start;
             justify-content: center;
           }
-          .home-container08 {
+          .home-container09 {
             flex: 0 0 auto;
             width: 199px;
             height: 183px;
@@ -410,12 +455,12 @@ const Home = (props) => {
             justify-content: flex-start;
             background-color: #075874;
           }
-          .home-text07 {
+          .home-text13 {
             color: var(--dl-color-gray-white);
             font-size: 20px;
             margin-top: var(--dl-space-space-oneandhalfunits);
           }
-          .home-container09 {
+          .home-container10 {
             flex: 0 0 auto;
             width: auto;
             height: auto;
@@ -432,7 +477,7 @@ const Home = (props) => {
             width: 100px;
             object-fit: cover;
           }
-          .home-container10 {
+          .home-container11 {
             flex: 0 0 auto;
             width: 267px;
             height: 221px;
@@ -446,7 +491,7 @@ const Home = (props) => {
             justify-content: flex-start;
             background-color: var(--dl-color-logocolors-bluedark);
           }
-          .home-container11 {
+          .home-container12 {
             width: 100%;
             height: 50%;
             display: flex;
@@ -457,16 +502,16 @@ const Home = (props) => {
             justify-content: center;
             background-color: #075874;
           }
-          .home-text08 {
+          .home-text14 {
             color: var(--dl-color-gray-white);
             font-size: 23px;
           }
-          .home-text09 {
+          .home-text15 {
             color: var(--dl-color-logocolors-lightblue3);
             font-size: 21px;
             margin-top: var(--dl-space-space-halfunit);
           }
-          .home-container12 {
+          .home-container13 {
             width: 100%;
             height: 52px;
             display: flex;
@@ -476,11 +521,11 @@ const Home = (props) => {
             justify-content: center;
             background-color: #075874;
           }
-          .home-text10 {
+          .home-text16 {
             color: var(--dl-color-gray-white);
             font-size: 20px;
           }
-          .home-container13 {
+          .home-container14 {
             width: 100%;
             height: 255px;
             display: flex;
@@ -510,7 +555,7 @@ const Home = (props) => {
             text-decoration: none;
             background-color: var(--dl-color-logocolors-lightred);
           }
-          .home-text11 {
+          .home-text17 {
             color: var(--dl-color-logocolors-lightblue3);
             margin-top: var(--dl-space-space-twounits);
             text-align: center;
@@ -545,7 +590,7 @@ const Home = (props) => {
               padding-left: var(--dl-space-space-twounits);
               padding-right: var(--dl-space-space-twounits);
             }
-            .home-text12 {
+            .home-text18 {
               text-align: center;
               margin-left: var(--dl-space-space-unit);
               margin-right: var(--dl-space-space-unit);
@@ -556,7 +601,7 @@ const Home = (props) => {
               padding: var(--dl-space-space-unit);
               flex-direction: column;
             }
-            .home-text12 {
+            .home-text18 {
               margin-left: 0px;
               margin-right: 0px;
               margin-bottom: var(--dl-space-space-unit);
@@ -569,4 +614,3 @@ const Home = (props) => {
 }
 
 export default Home
-
