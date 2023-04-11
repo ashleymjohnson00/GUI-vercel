@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
 import axios from 'axios'
+import { ToastProvider, useToasts } from 'react-toast-notifications';
 import { TRACE_OUTPUT_VERSION } from 'next/dist/shared/lib/constants'
 
 const Landing = (props) => {
