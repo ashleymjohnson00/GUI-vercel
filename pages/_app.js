@@ -5,7 +5,7 @@ import React from "react";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ToastProvider autoDismiss={false} placement={'top-center'} newestOnTop={true} portalTargetSelector="home-sidebar">
+    <ToastProvider autoDismiss={false} placement={'top-center'} newestOnTop={true}>
       <Component {...pageProps} />
     </ToastProvider>
   );

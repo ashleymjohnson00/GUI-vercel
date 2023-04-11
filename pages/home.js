@@ -76,7 +76,7 @@ const Home = (props) => {
               <div className="home-container09">
                 <span className="home-text13">Camera Controls</span>
                 <div className="home-container10">
-                  <button onClick={() => addToast("Warning: Threat Detected!", { appearance: "warning" })}>
+                  <button onClick={() => addToast("Warning: Threat Detected!", { appearance: "error" })}>
                     Warn
                   </button>
                   <img
