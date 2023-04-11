@@ -2,9 +2,6 @@ import React from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
 import axios from 'axios'
-import { Nav, Alert } from 'components';
-import { useState } from 'react';
-import { alertService } from 'services';
 
 const Home = (props) => {
   return (
@@ -45,7 +42,6 @@ const Home = (props) => {
             <h1 className="home-text">Updates</h1>
           </div>
           <div id="alert-container" className="home-container04 textarea">
-            <Alert />
             <span className="home-text01">00/00/00 00:00:00</span>
             <span className="home-text02">
               <span>Threat Detected</span>
@@ -76,7 +72,7 @@ const Home = (props) => {
             </div>
             <div className="home-container08">
               <div className="home-container09">
-                <button className="btn btn-success m-1" onClick={() => alertService.success('Success!!', options)}>Success</button>
+                <span className="home-text13">Camera Controls</span>
                 <div className="home-container10">
                   <img
                     alt="image"
