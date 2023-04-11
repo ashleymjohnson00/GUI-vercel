@@ -5,7 +5,7 @@ import React from "react";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ToastProvider autoDismiss={true} autoDismissTimeout="2000">
+    <ToastProvider autoDismiss={true} autoDismissTimeout="6000">
       <Component {...pageProps} />
     </ToastProvider>
   );
