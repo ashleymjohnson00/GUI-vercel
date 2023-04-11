@@ -31,7 +31,7 @@ const Landing = (props) => {
   let fromoutput = await output.catch((error) => {console.log("error")})
   let verifyUsername = fromoutput.data.document.username
   let verifyPassword = fromoutput.data.document.password;
-  displaysuccess = () => addToast("Login Successful!", { appearance: "success" })
+  displaysuccess = addToast("Login Successful!", { appearance: "success" })
   document.location.href = "/home"
   }
   catch(err){
