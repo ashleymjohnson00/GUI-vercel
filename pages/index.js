@@ -50,8 +50,7 @@ const Landing = (props) => {
   document.location.href = "/home"
   }
   catch(err){
-    displaysuccess = "login failed"
-
+    displaysuccess = <FormWithToasts />
     
   }
   
