@@ -5,8 +5,22 @@ import axios from 'axios'
 import { ToastProvider, useToasts } from 'react-toast-notifications';
 import { TRACE_OUTPUT_VERSION } from 'next/dist/shared/lib/constants'
 
-const Landing = (props) => {
+const FormWithToasts = () => {
   const { addToast } = useToasts();
+
+  const onSubmit = async value => {
+    const { error } = await dataPersistenceLayer(value);
+
+    if (error) {
+      addToast(error.message, { appearance: 'error' });
+    } else {
+      addToast('Login Successful', { appearance: 'success' });
+    }
+  };
+  return <form onSubmit={onSubmit}>...</form>;
+};
+
+const Landing = (props) => {
   require('dotenv').config();
   const mongokey = process.env.MONGO_API;
   var displaysuccess;
@@ -32,7 +46,7 @@ const Landing = (props) => {
   let fromoutput = await output.catch((error) => {console.log("error")})
   let verifyUsername = fromoutput.data.document.username
   let verifyPassword = fromoutput.data.document.password;
-  displaysuccess = addToast("Login Successful!", { appearance: "success" })
+  displaysuccess = <FormWithToasts />
   document.location.href = "/home"
   }
   catch(err){
