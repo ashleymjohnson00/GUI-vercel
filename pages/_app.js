@@ -5,7 +5,7 @@ import React from "react";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ToastProvider autoDismiss={false} placement={'top-center'} newestOnTop={true}>
+    <ToastProvider autoDismiss={false} placement={'top-right'} newestOnTop={true}>
       <Component {...pageProps} />
     </ToastProvider>
   );
