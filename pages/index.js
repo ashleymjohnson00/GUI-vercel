@@ -8,20 +8,23 @@ import { TRACE_OUTPUT_VERSION } from 'next/dist/shared/lib/constants'
 const FormWithToasts = () => {
   const { addToast } = useToasts();
 
-  const onSubmit = async value => {
-    const { error } = await dataPersistenceLayer(value);
+  const onSubmit = async displaysuccess => {
+    const { displaysuccess } = displaysuccess;
 
-    if (error) {
-      addToast(error.message, { appearance: 'error' });
+    if (displaysuccess == "loginfail") {
+      addToast('Login Failed', { appearance: 'error' });
     } else {
       addToast('Login Successful', { appearance: 'success' });
     }
   };
+
   return <form onSubmit={onSubmit}>...</form>;
 };
 
+
 const Landing = (props) => {
   require('dotenv').config();
+  const { addToast } = useToasts();
   const mongokey = process.env.MONGO_API;
   var displaysuccess;
   async function verifyLogin(){
@@ -46,11 +49,11 @@ const Landing = (props) => {
   let fromoutput = await output.catch((error) => {console.log("error")})
   let verifyUsername = fromoutput.data.document.username
   let verifyPassword = fromoutput.data.document.password;
-  displaysuccess = <FormWithToasts />
+  displaysuccess = loginsuccess
   document.location.href = "/home"
   }
   catch(err){
-    displaysuccess = <FormWithToasts />
+    displaysuccess = loginfail
     
   }
   
@@ -99,7 +102,9 @@ const Landing = (props) => {
         <Link href="/new-user" id="Navigation" name="newUser">
           <a className="landing-link1">Click Here</a>
         </Link>
-        <h1 id="displayresult"> </h1>
+        <ToastProvider>
+          <FormWithToasts />
+        </ToastProvider>
       </div>
     </div>
     <style jsx>
