@@ -5,6 +5,7 @@ import axios from 'axios'
 import { TRACE_OUTPUT_VERSION } from 'next/dist/shared/lib/constants'
 
 const Landing = (props) => {
+  const { addToast } = useToasts();
   require('dotenv').config();
   const mongokey = process.env.MONGO_API;
   var displaysuccess;
@@ -30,7 +31,7 @@ const Landing = (props) => {
   let fromoutput = await output.catch((error) => {console.log("error")})
   let verifyUsername = fromoutput.data.document.username
   let verifyPassword = fromoutput.data.document.password;
-  displaysuccess = "User logged in"
+  displaysuccess = () => addToast("Login Successful!", { appearance: "success" })
   document.location.href = "/home"
   }
   catch(err){
