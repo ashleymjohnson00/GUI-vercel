@@ -2,8 +2,10 @@ import React from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
 import axios from 'axios'
+import { useToasts } from "react-toast-notifications";
 
 const Home = (props) => {
+  const { addToast } = useToasts();
   return (
     <>
       <main className="home-container">
@@ -74,6 +76,9 @@ const Home = (props) => {
               <div className="home-container09">
                 <span className="home-text13">Camera Controls</span>
                 <div className="home-container10">
+                  <button onClick={() => addToast("Warn!", { appearance: "warning" })}>
+                    Warn
+                  </button>
                   <img
                     alt="image"
                     src="/playground_assets/triangle-left-svgrepo-com.svg"
