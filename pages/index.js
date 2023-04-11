@@ -54,7 +54,7 @@ const Landing = (props) => {
     
   }
   
-  //document.getElementById("displayresult").innerHTML = displaysuccess
+  document.getElementById("displayresult").innerHTML = displaysuccess
 
   }
   return (
