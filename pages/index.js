@@ -9,9 +9,9 @@ const FormWithToasts = () => {
   const { addToast } = useToasts();
 
   const onSubmit = async displaysuccess => {
-    const { displaysuccess } = displaysuccess;
+    const { status } = displaysuccess;
 
-    if (displaysuccess == "loginfail") {
+    if (status == "loginfail") {
       addToast('Login Failed', { appearance: 'error' });
     } else {
       addToast('Login Successful', { appearance: 'success' });
