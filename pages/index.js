@@ -33,17 +33,17 @@ const Landing = (props) => {
   let fromoutput = await output.catch((error) => {console.log("error")})
   let verifyUsername = fromoutput.data.document.username
   let verifyPassword = fromoutput.data.document.password;
-  displaysuccess = "Login Successful"
+  //displaysuccess = "Login Successful"
   addToast("Login Successful! :D", { appearance: "success" , autoDismiss: true, autoDismissTimeout: 2000})
   document.location.href = "/home"
   }
   catch(err){
-    displaysuccess = "Login Failed"
+    //displaysuccess = "Login Failed"
     addToast("Login Failed. Try Again :(", { appearance: "error" , autoDismiss: true, autoDismissTimeout: 3000})
     
   }
   
-  document.getElementById("displayresult").innerHTML = displaysuccess
+  //document.getElementById("displayresult").innerHTML = displaysuccess
   }
 
   return (
@@ -92,10 +92,6 @@ const Landing = (props) => {
         <Link href="/new-user" id="Navigation" name="newUser">
           <a className="landing-link1">Click Here</a>
         </Link>
-
-        {/*id="displayresult"*/}
-        <h1 id="displayresult">
-        </h1>
       </div>
     </div>
     <style jsx>
