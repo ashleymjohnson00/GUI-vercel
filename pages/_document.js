@@ -31,17 +31,9 @@ class CustomDocument extends Document {
             type="icon/png"
             sizes="32x32"
           ></link>
-          <link href="https://db.onlinewebfonts.com/c/9dc386ee004e5dab994028f74afb1694?family=Industry+Light" rel="stylesheet" type="text/css"/>
-          <link
-            rel="stylesheet"
-            href="https://db.onlinewebfonts.com/c/d60b13a925ef3dfc380e1dcd4cc5673b?family=IndustryIncW00-Base"
-            data-tag="font"
-          ></link>
-          <link
-            rel="stylesheet"
-            href="https://db.onlinewebfonts.com/c/f7f6fceb74ceadf616dbd0aa3675aa42?family=Industry+Med"
-            data-tag="font"
-          ></link>
+          <link href="https://db.onlinewebfonts.com/c/9dc386ee004e5dab994028f74afb1694?family=Industry+Light" rel="stylesheet" type="text/css" data-tag="font"/>
+          <link href="https://db.onlinewebfonts.com/c/d60b13a925ef3dfc380e1dcd4cc5673b?family=IndustryIncW00-Base" rel="stylesheet" type="text/css" data-tag="font"/>
+          <link href="//db.onlinewebfonts.com/c/31a8ba2c64a597c958690eb058997e94?family=Industry+Medium" rel="stylesheet" type="text/css" data-tag="font"/>
           <noscript
             dangerouslySetInnerHTML={{
               __html:
