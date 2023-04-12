@@ -45,7 +45,8 @@ const Landing = (props) => {
   }
 
   function checkNotif() {
-    document.getElementById("displayresult").innerText == "Login Successful" 
+    document.getElementById("displayresult").innerHTML = displaysuccess
+    document.getElementById("displayresult").innerHTML == "Login Successful" 
     ? addToast("Login Successful! :D", { appearance: "success" , autoDismiss: true, autoDismissTimeout: 2000}) 
     : addToast("Login Failed. Try Again :(", { appearance: "error" , autoDismiss: true, autoDismissTimeout: 3000})
   }
