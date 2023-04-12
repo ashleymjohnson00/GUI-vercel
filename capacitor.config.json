@@ -1,0 +1,6 @@
+{
+  "appId": "com.bajasecurity.app",
+  "appName": "baja-security",
+  "webDir": "public",
+  "bundledWebRuntime": false
+}
