@@ -8,6 +8,7 @@ import { setTimeout } from "timers/promises"
 const NewUser = (props) => {
   require('dotenv').config();
   const { addToast } = useToasts();
+  const timers = require('timers-promises')
   const mongokey = process.env.MONGODB_API;
 
   async function createAccount(){
@@ -30,7 +31,7 @@ const NewUser = (props) => {
   })
   let displaysuccess = "Account Created Succesfully"
   addToast("Account Created Succesfully :D", { appearance: "success" , autoDismiss: true, autoDismissTimeout: 3000})
-  await new Promise(r => setTimeout(r, 3500))
+  await timers.setTimeout(3500)
   document.getElementById("displayresultSuccess").innerHTML = displaysuccess
 
   }
