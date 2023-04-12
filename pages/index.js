@@ -81,7 +81,7 @@ const Landing = (props) => {
           className="landing-textinput1 input"
         />
         <button 
-          onClick= {() =>{verifyLogin(); addToast("Trying to Login... ", { appearance: "info" });}}  
+          onClick= {() =>{verifyLogin(); addToast("Trying to Login... ", { appearance: "info" }, {autoDismiss: true});}}  
           id="submitLogin" 
           name="Home button"
         >
