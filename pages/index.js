@@ -8,6 +8,7 @@ import { TRACE_OUTPUT_VERSION } from 'next/dist/shared/lib/constants'
 
 const Landing = (props) => {
   require('dotenv').config();
+  const { addToast } = useToasts();
   const mongokey = process.env.MONGO_API;
   var displaysuccess;
   async function verifyLogin(){
@@ -85,7 +86,15 @@ const Landing = (props) => {
         <Link href="/new-user" id="Navigation" name="newUser">
           <a className="landing-link1">Click Here</a>
         </Link>
-        <h1 id="displayresult"> </h1>
+
+        {/*id="displayresult"*/}
+        <h1 >
+        {
+          document.getElementById("displayresult").innerHTML == "Login Successful"
+          ? addToast("Login Successful! Welcome.", { appearance: "success" })
+          : addToast("Login Failed. Please Try Again.", { appearance: "error" })
+        }
+        </h1>
       </div>
     </div>
     <style jsx>
