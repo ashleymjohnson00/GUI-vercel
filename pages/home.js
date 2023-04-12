@@ -68,13 +68,13 @@ const Home = (props) => {
                 <br></br>
               </span>
               <span className="home-text10">
-                <span className="home-text11">41</span>
+                <span className="home-text11">74</span>
                 <br></br>
               </span>
             </div>
             <div className="home-container08">
               <div className="home-container09">
-                <span className="home-text13">Notification Controls</span>
+                <span className="home-text13">Alert Controls</span>
                 <div className="home-container10">
                   <button onClick={() => addToast("Warning: Threat Detected!", { appearance: "error" })}>
                     Warn!
