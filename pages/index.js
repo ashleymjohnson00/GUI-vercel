@@ -80,7 +80,11 @@ const Landing = (props) => {
           autoComplete="current-password"
           className="landing-textinput1 input"
         />
-        <button onClick={verifyLogin} id="submitLogin" name="Home button">
+        <button 
+          onClick= {() =>{verifyLogin(); addToast("Trying to Login... ", { appearance: "info" });}}  
+          id="submitLogin" 
+          name="Home button"
+        >
           <a className="landing-link">Submit</a>
         </button>
         <Link href="/new-user" id="Navigation" name="newUser">
@@ -88,12 +92,7 @@ const Landing = (props) => {
         </Link>
 
         {/*id="displayresult"*/}
-        <h1 >
-        {
-          document.getElementById("displayresult").innerHTML == "Login Successful"
-          ? addToast("Login Successful! Welcome.", { appearance: "success" })
-          : addToast("Login Failed. Please Try Again.", { appearance: "error" })
-        }
+        <h1 id="displayresult">
         </h1>
       </div>
     </div>
