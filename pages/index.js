@@ -42,7 +42,7 @@ const Landing = (props) => {
   }
   
   document.getElementById("displayresult").innerHTML = displaysuccess
-
+  let resultNotif = document.getElementById("displayresult").innerHTML;
   }
   return (
     <>
@@ -81,7 +81,7 @@ const Landing = (props) => {
           className="landing-textinput1 input"
         />
         <button 
-          onClick= {() =>{verifyLogin(); addToast("Trying to Login... ", { appearance: "info" , autoDismiss: true, autoDismissTimeout: 2000}); document.getElementById("displayresult").innerHTML == "Login Failed" ? addToast("Login Failed. Try Again.", { appearance: "error" , autoDismiss: true, autoDismissTimeout: 3000}) : addToast("Login Success!", { appearance: "success" , autoDismiss: true, autoDismissTimeout: 3000});}}  
+          onClick= {() =>{verifyLogin(); addToast("Trying to Login... ", { appearance: "info" , autoDismiss: true, autoDismissTimeout: 2000}); resultNotif === "Login Failed" ? addToast("Login Failed. Try Again.", { appearance: "error" , autoDismiss: true, autoDismissTimeout: 3000}) : addToast("Login Successful! :D", { appearance: "success" , autoDismiss: true, autoDismissTimeout: 3000});}}  
           id="submitLogin" 
           name="Home button"
         >
