@@ -31,6 +31,7 @@ const NewUser = (props) => {
   let displaysuccess = "Account Created Succesfully"
   addToast("Account Created Succesfully :D", { appearance: "success" , autoDismiss: true, autoDismissTimeout: 3000})
   await timers.setTimeout(3500)
+  document.location.href = "/"
   document.getElementById("displayresultSuccess").innerHTML = displaysuccess
 
   }
@@ -81,7 +82,7 @@ const NewUser = (props) => {
             className="new-user-textinput2 input"
           />
           <button  id="Navigation" name="newUsersubmit">
-            <a onClick={createAccount} href="/" className="new-user-link">Submit</a>
+            <a onClick={createAccount} className="new-user-link">Submit</a>
           </button>
           <h1 id="displayresultSuccess"></h1>
         </div>
