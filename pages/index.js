@@ -8,13 +8,13 @@ import { TRACE_OUTPUT_VERSION } from 'next/dist/shared/lib/constants'
 const FormWithToasts = () => {
   const { addToast } = useToasts();
 
-  const onSubmit = async displaysuccess => {
-    const { status } = displaysuccess;
+  const onSubmit = async value => {
+    const { error } = await dataPersistenceLayer(value);
 
-    if (status == "loginfail") {
-      addToast('Login Failed', { appearance: 'error' });
+    if (error) {
+      addToast(error.message, { appearance: 'error' });
     } else {
-      addToast('Login Successful', { appearance: 'success' });
+      addToast('Saved Successfully', { appearance: 'success' });
     }
   };
 
@@ -49,11 +49,11 @@ const Landing = (props) => {
   let fromoutput = await output.catch((error) => {console.log("error")})
   let verifyUsername = fromoutput.data.document.username
   let verifyPassword = fromoutput.data.document.password;
-  displaysuccess = loginsuccess
+  displaysuccess = addToast("Login Successful", { appearance: "success" })
   document.location.href = "/home"
   }
   catch(err){
-    displaysuccess = loginfail
+    displaysuccess = addToast("Login Failed", { appearance: "error" })
     
   }
   
@@ -102,9 +102,7 @@ const Landing = (props) => {
         <Link href="/new-user" id="Navigation" name="newUser">
           <a className="landing-link1">Click Here</a>
         </Link>
-        <ToastProvider>
-          <FormWithToasts />
-        </ToastProvider>
+        <h1 id="displayresult"> </h1>
       </div>
     </div>
     <style jsx>
