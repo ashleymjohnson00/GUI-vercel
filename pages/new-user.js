@@ -30,7 +30,7 @@ const NewUser = (props) => {
   })
   let displaysuccess = "Account Created Succesfully"
   addToast("Account Created Succesfully :D", { appearance: "success" , autoDismiss: true, autoDismissTimeout: 3000})
-  await setTimeout(3500);
+  await new Promise(r => setTimeout(r, 3500))
   document.getElementById("displayresultSuccess").innerHTML = displaysuccess
 
   }
