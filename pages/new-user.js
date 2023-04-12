@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Head from 'next/head'
 import axios from 'axios';
 import { ToastProvider, useToasts } from 'react-toast-notifications';
+import { setTimeout } from "timers/promises"
 
 const NewUser = (props) => {
   require('dotenv').config();
@@ -28,7 +29,8 @@ const NewUser = (props) => {
     ).catch((error) => {addToast("Account Creation Failed. Try Again :(", { appearance: "error" , autoDismiss: true, autoDismissTimeout: 5000})
   })
   let displaysuccess = "Account Created Succesfully"
-  addToast("Account Created Succesfully :D", { appearance: "success" , autoDismiss: true, autoDismissTimeout: 4000})
+  addToast("Account Created Succesfully :D", { appearance: "success" , autoDismiss: true, autoDismissTimeout: 3000})
+  await setTimeout(3500);
   document.getElementById("displayresultSuccess").innerHTML = displaysuccess
 
   }
