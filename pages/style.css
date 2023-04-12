@@ -106,3 +106,6 @@
   text-transform: capitalize;
   text-decoration: none;
 }
+
+@import url(//db.onlinewebfonts.com/c/9dc386ee004e5dab994028f74afb1694?family=Industry+Light);
+@font-face {font-family: "Industry Light"; src: url("//db.onlinewebfonts.com/t/9dc386ee004e5dab994028f74afb1694.eot"); src: url("//db.onlinewebfonts.com/t/9dc386ee004e5dab994028f74afb1694.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/9dc386ee004e5dab994028f74afb1694.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/9dc386ee004e5dab994028f74afb1694.woff") format("woff"), url("//db.onlinewebfonts.com/t/9dc386ee004e5dab994028f74afb1694.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/9dc386ee004e5dab994028f74afb1694.svg#Industry Light") format("svg"); }
