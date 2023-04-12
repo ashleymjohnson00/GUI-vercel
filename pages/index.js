@@ -12,6 +12,7 @@ const Landing = (props) => {
   const mongokey = process.env.MONGO_API;
   var displaysuccess;
   async function verifyLogin(){
+    addToast("Trying to Login... ", { appearance: "info" , autoDismiss: true, autoDismissTimeout: 1000})
     var username = document.querySelector("[name=userUsername]").value.toString()
     var password = document.querySelector("[name=userPassword]").value.toString()
    
