@@ -31,7 +31,7 @@ class CustomDocument extends Document {
             type="icon/png"
             sizes="32x32"
           ></link>
-          <link href="//db.onlinewebfonts.com/c/9dc386ee004e5dab994028f74afb1694?family=Industry+Light" rel="stylesheet" type="text/css"/>
+          <link href="https://db.onlinewebfonts.com/c/9dc386ee004e5dab994028f74afb1694?family=Industry+Light" rel="stylesheet" type="text/css"/>
           <link
             rel="stylesheet"
             href="https://db.onlinewebfonts.com/c/d60b13a925ef3dfc380e1dcd4cc5673b?family=IndustryIncW00-Base"
