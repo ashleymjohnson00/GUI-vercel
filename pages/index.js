@@ -35,8 +35,8 @@ const Landing = (props) => {
   let verifyUsername = fromoutput.data.document.username
   let verifyPassword = fromoutput.data.document.password;
   //displaysuccess = "Login Successful"
-  addToast("Login Successful! :D", { appearance: "success" , autoDismiss: true, autoDismissTimeout: 4000})
-  await timers.setTimeout(4500)
+  addToast("Login Successful! :D", { appearance: "success" , autoDismiss: true, autoDismissTimeout: 2000})
+  await timers.setTimeout(2500)
   document.location.href = "/home"
   }
   catch(err){
