@@ -33,7 +33,7 @@ class CustomDocument extends Document {
           ></link>
           <link
             rel="stylesheet"
-            href="https://db.onlinewebfonts.com/c/9dc386ee004e5dab994028f74afb1694?family=Industry+Light"
+            href="//db.onlinewebfonts.com/c/9dc386ee004e5dab994028f74afb1694?family=Industry+Light"
             data-tag="font"
           ></link>
           <link
