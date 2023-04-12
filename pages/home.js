@@ -74,21 +74,11 @@ const Home = (props) => {
             </div>
             <div className="home-container08">
               <div className="home-container09">
-                <span className="home-text13">Camera Controls</span>
+                <span className="home-text13">Notification Controls</span>
                 <div className="home-container10">
                   <button onClick={() => addToast("Warning: Threat Detected!", { appearance: "error" })}>
                     Warn!
                   </button>
-                  <img
-                    alt="image"
-                    src="/playground_assets/triangle-left-svgrepo-com.svg"
-                    className="home-image1"
-                  />
-                  <img
-                    alt="image"
-                    src="/playground_assets/triangle-left-svgrepo-com%20%5B1%5D.svg"
-                    className="home-image2"
-                  />
                 </div>
               </div>
               <div className="home-container11">
