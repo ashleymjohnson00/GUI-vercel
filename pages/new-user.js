@@ -5,6 +5,7 @@ import axios from 'axios';
 
 const NewUser = (props) => {
   require('dotenv').config();
+  const { addToast } = useToasts();
   const mongokey = process.env.MONGODB_API;
 
   async function createAccount(){
@@ -23,9 +24,10 @@ const NewUser = (props) => {
       "Content-Type" : "application/json",
       "api-key": mongokey,
     }
-    ).catch((error) => {console.log("failed")
+    ).catch((error) => {console.log("failed"); addToast("Account Creation Failed. Try Again :(", { appearance: "error" , autoDismiss: true, autoDismissTimeout: 5000});
   })
   let displaysuccess = "Account Created Succesfully"
+  addToast("Account Created Succesfully :D", { appearance: "success" , autoDismiss: true, autoDismissTimeout: 3000})
   document.getElementById("displayresultSuccess").innerHTML = displaysuccess
 
   }
