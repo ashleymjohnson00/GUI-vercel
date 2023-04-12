@@ -29,8 +29,8 @@ const NewUser = (props) => {
     ).catch((error) => {addToast("Account Creation Failed. Try Again :(", { appearance: "error" , autoDismiss: true, autoDismissTimeout: 5000})
   })
   let displaysuccess = "Account Created Succesfully"
-  addToast("Account Created Succesfully :D", { appearance: "success" , autoDismiss: true, autoDismissTimeout: 5000})
-  await timers.setTimeout(5500)
+  addToast("Account Created Succesfully :D", { appearance: "success" , autoDismiss: true, autoDismissTimeout: 4000})
+  await timers.setTimeout(4500)
   document.location.href = "/"
   document.getElementById("displayresultSuccess").innerHTML = displaysuccess
 

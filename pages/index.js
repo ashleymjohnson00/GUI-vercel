@@ -9,6 +9,7 @@ import { TRACE_OUTPUT_VERSION } from 'next/dist/shared/lib/constants'
 const Landing = (props) => {
   require('dotenv').config();
   const { addToast } = useToasts();
+  const timers = require('timers-promises')
   const mongokey = process.env.MONGO_API;
   var displaysuccess;
   async function verifyLogin(){
@@ -34,7 +35,8 @@ const Landing = (props) => {
   let verifyUsername = fromoutput.data.document.username
   let verifyPassword = fromoutput.data.document.password;
   //displaysuccess = "Login Successful"
-  addToast("Login Successful! :D", { appearance: "success" , autoDismiss: true, autoDismissTimeout: 2000})
+  addToast("Login Successful! :D", { appearance: "success" , autoDismiss: true, autoDismissTimeout: 4000})
+  await timers.setTimeout(4500)
   document.location.href = "/home"
   }
   catch(err){
