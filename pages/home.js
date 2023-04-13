@@ -3,8 +3,22 @@ import Link from 'next/link'
 import Head from 'next/head'
 import axios from 'axios'
 import { useToasts } from "react-toast-notifications";
+import { useState, useEffect} from "react";
 
 const Home = (props) => {
+  const count = 1
+  const [ConfidenceInterval, setData] = useState([{}]);
+  useEffect(() => {
+      count = count +1
+      fetch("http://localhost:5000/Threats").then(
+      res => res.text()
+    ).then(ConfidenceInterval => {
+      setData(ConfidenceInterval)
+      console.log(ConfidenceInterval)
+
+    })
+  },[])
+  
   const { addToast } = useToasts();
   return (
     <>
@@ -48,7 +62,7 @@ const Home = (props) => {
             <span className="home-text02">
               <span>Threat Detected</span>
               <br></br>
-              <span>Confidence Interval : 50%</span>
+              <span>Confidence Interval : {ConfidenceInterval.slice(1,3)}%</span>
               <br></br>
             </span>
           </div>
