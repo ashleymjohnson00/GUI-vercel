@@ -8,7 +8,9 @@ function MyApp({ Component, pageProps }) {
     <ToastProvider autoDismiss={false} placement={'center-center'} newestOnTop={false}>
       <Component {...pageProps} />
     </ToastProvider>
+    
   );
+  
 }
 
 // Only uncomment this method if you have blocking data requirements for

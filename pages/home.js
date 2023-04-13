@@ -4,22 +4,48 @@ import Head from 'next/head'
 import axios from 'axios'
 import { useToasts } from "react-toast-notifications";
 import { useState, useEffect} from "react";
+import { useRouter } from 'next/router';
+
+
 
 const Home = (props) => {
-  const count = 1
+  const router = useRouter();
+  const { addToast } = useToasts();
+  const previousConfidence = ""
   const [ConfidenceInterval, setData] = useState([{}]);
   useEffect(() => {
-      count = count +1
-      fetch("http://localhost:5000/Threats").then(
+     const interval = setInterval(() => {
+    
+     const getCI = fetch("http://localhost:5000/Threats",{
+     }).then(
       res => res.text()
     ).then(ConfidenceInterval => {
+      console.log(getCI.statusCode)
       setData(ConfidenceInterval)
+      if(ConfidenceInterval != previousConfidence){
+        addToast("Warning: Threat Detected!", { appearance: "error" })
+        
+      }
+      previousConfidence = ConfidenceInterval
       console.log(ConfidenceInterval)
+     
 
     })
+    }, 500);
   },[])
+  const [timestamp, setTs] = useState([{}]);
+  useEffect(() => {
+      const getTs = fetch("http://localhost:5000/timestamp").then(
+      res => res.text()
+    ).then(timestamp => {
+      setTs(timestamp)
+      console.log(timestamp)
+    })
   
-  const { addToast } = useToasts();
+   },[]
+  )
+ 
+  
   return (
     <>
       <main className="home-container">
@@ -58,11 +84,11 @@ const Home = (props) => {
             <h1 className="home-text">Updates</h1>
           </div>
           <div id="alert-container" className="home-container04 textarea">
-            <span className="home-text01">00/00/00 00:00:00</span>
+            <span className="home-text01">{timestamp.slice(1,30)}</span>
             <span className="home-text02">
               <span>Threat Detected</span>
               <br></br>
-              <span>Confidence Interval : {ConfidenceInterval.slice(1,3)}%</span>
+              <span>Confidence Interval : {ConfidenceInterval.slice(2,4)}%</span>
               <br></br>
             </span>
           </div>
@@ -82,7 +108,7 @@ const Home = (props) => {
                 <br></br>
               </span>
               <span className="home-text10">
-                <span className="home-text11">{ConfidenceInterval.slice(1,3)}%</span>
+                <span className="home-text11">{ConfidenceInterval.slice(2,4)}%</span>
                 <br></br>
               </span>
             </div>
@@ -101,7 +127,7 @@ const Home = (props) => {
                   <span className="home-text15">Lobby</span>
                 </div>
                 <div className="home-container13">
-                  <span className="home-text16">00:00:00 00/00/00</span>
+                  <span className="home-text16">{timestamp.slice(1,30)}</span>
                 </div>
               </div>
             </div>
@@ -519,7 +545,7 @@ const Home = (props) => {
             margin-top: var(--dl-space-space-halfunit);
           }
           .home-container13 {
-            width: 100%;
+            width: 115%;
             height: 52px;
             display: flex;
             align-items: center;
