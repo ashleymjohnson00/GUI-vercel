@@ -87,8 +87,10 @@ const Home = (props) => {
           </div>
         </div>
         <div className="home-container05">
+          {/* <iframe src="https://giphy.com/embed/ipta0C5NK3oX8YFLH5" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/ipta0C5NK3oX8YFLH5">via GIPHY</a></p> */}
           <iframe
             src="https://giphy.com/embed/ipta0C5NK3oX8YFLH5"
+            width="100%" height="50%"
             frameBorder="0" 
             class="giphy-embed" 
             allowFullScreen
