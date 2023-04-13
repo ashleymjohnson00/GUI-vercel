@@ -85,7 +85,6 @@ const Home = (props) => {
           </div>
           <div id="alert-container" className="home-container04 textarea">
             <span className="home-text01">{timestamp.slice(1,30)}</span>
-            <span className="home-text01">00/00/00 00:00:00</span>
             <span className="home-text02">
               <span>Threat Detected</span>
               <br></br>
