@@ -12,11 +12,12 @@ const Home = (props) => {
   useEffect(() => {
       count = count +1
       fetch("http://localhost:5000/Threats").then(
-      res => res.text()
+      res => res.a()
     ).then(ConfidenceInterval => {
       setData(ConfidenceInterval)
       console.log(ConfidenceInterval)
-
+      const ConfidenceIntervalArray = []
+      
     })
   },[])
   
@@ -59,7 +60,24 @@ const Home = (props) => {
           <div className="home-container03">
             <h1 className="home-text">Updates</h1>
           </div>
-          <div id="alert-container" className="home-container04 textarea">
+          <div id="alert-container" className="home-container04 textarea"> 
+          {/*<script>
+            const alertContain = document.getElementById('alert-container');
+            const postnewAlert = document.createElement('h1')
+          </script>*/}
+            <span className="home-text01">00/00/00 00:00:00</span>
+            <span className="home-text02">
+              <span>Threat Detected</span>
+              <br></br>
+              <span>Confidence Interval : {ConfidenceInterval.slice(1,3)}%</span>
+              <br></br>
+            </span>
+          </div>
+          <div id="alert-container" className="home-container04 textarea"> 
+          {/*<script>
+            const alertContain = document.getElementById('alert-container');
+            const postnewAlert = document.createElement('h1')
+        </script>*/}
             <span className="home-text01">00/00/00 00:00:00</span>
             <span className="home-text02">
               <span>Threat Detected</span>
