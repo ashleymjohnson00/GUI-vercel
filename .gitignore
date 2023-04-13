@@ -26,9 +26,11 @@ coverage
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 build/Release
 
+
+
 # Dependency directories
-node_modules
-!ToastContainer.js
+node_modules/
+.git add -f node_modules/react-toast-notifications
 jspm_packages
 
 # Optional npm cache directory
