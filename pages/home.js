@@ -82,7 +82,7 @@ const Home = (props) => {
                 <br></br>
               </span>
               <span className="home-text10">
-                <span className="home-text11">74</span>
+                <span className="home-text11">{ConfidenceInterval.slice(1,3)}%</span>
                 <br></br>
               </span>
             </div>
