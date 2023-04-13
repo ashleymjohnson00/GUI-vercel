@@ -88,9 +88,9 @@ const Home = (props) => {
         </div>
         <div className="home-container05">
           <iframe
-            src="https://www.youtube.com/embed/lwHnvO5QsDc?autoplay=1&modestbranding=1&loop=1&rel=0&origin=http://baja-security.com"
-            allow="autoplay"
-            frameborder="0"
+            src="https://giphy.com/embed/ipta0C5NK3oX8YFLH5"
+            frameBorder="0" 
+            class="giphy-embed" 
             allowFullScreen
             className="home-iframe"
           ></iframe>
