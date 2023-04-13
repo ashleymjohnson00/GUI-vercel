@@ -30,7 +30,6 @@ build/Release
 
 # Dependency directories
 node_modules
-git add node_modules/react-toast-notifications/dist/ToastContainer.js
 jspm_packages
 
 # Optional npm cache directory
