@@ -85,6 +85,7 @@ const Home = (props) => {
           </div>
           <div id="alert-container" className="home-container04 textarea">
             <span className="home-text01">{timestamp.slice(1,30)}</span>
+            <span className="home-text01">00/00/00 00:00:00</span>
             <span className="home-text02">
               <span>Threat Detected</span>
               <br></br>
@@ -95,9 +96,10 @@ const Home = (props) => {
         </div>
         <div className="home-container05">
           <iframe
-            src="https://www.youtube.com/embed/lwHnvO5QsDc?autoplay=1&modestbranding=1&loop=1&rel=0&origin=http://baja-security.com"
-            allow="autoplay"
-            frameborder="0"
+            src="https://giphy.com/embed/ipta0C5NK3oX8YFLH5"
+            width="100%" height="50%"
+            frameBorder="0" 
+            class="giphy-embed" 
             allowFullScreen
             className="home-iframe"
           ></iframe>
