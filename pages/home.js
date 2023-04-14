@@ -9,13 +9,21 @@ import { useRouter } from 'next/router';
 
 
 const Home = (props) => {
+  async function addUpdate(time){
+    const location = document.getElementsByClassName("home-container03")
+    console.log("add update")
+    const newTimeStamp = document.createElement('div')
+    newTimeStamp.className === 'home-text01'
+    newTimeStamp.innerText === {time}
+  
+  }
+
   const router = useRouter();
   const { addToast } = useToasts();
   const previousConfidence = ""
   const [ConfidenceInterval, setData] = useState([{}]);
   useEffect(() => {
      const interval = setInterval(() => {
-    
      const getCI = fetch("http://localhost:5000/Threats",{
      }).then(
       res => res.text()
@@ -24,15 +32,17 @@ const Home = (props) => {
       setData(ConfidenceInterval)
       if(ConfidenceInterval != previousConfidence){
         addToast("Warning: Threat Detected!", { appearance: "error" })
+        addUpdate(ConfidenceInterval)
         
       }
       previousConfidence = ConfidenceInterval
       console.log(ConfidenceInterval)
+
      
 
-    })
-    }, 500);
-  },[])
+    }).catch(err => console.log("test"))
+  }, 500);
+},[])
   const [timestamp, setTs] = useState([{}]);
   useEffect(() => {
       const getTs = fetch("http://localhost:5000/timestamp").then(
@@ -40,7 +50,7 @@ const Home = (props) => {
     ).then(timestamp => {
       setTs(timestamp)
       console.log(timestamp)
-    })
+    }).catch(err => console.log("test"))
   
    },[]
   )
@@ -82,15 +92,6 @@ const Home = (props) => {
         <div id="Updates-Sidebar" className="home-sidebar">
           <div className="home-container03">
             <h1 className="home-text">Updates</h1>
-          </div>
-          <div id="alert-container" className="home-container04 textarea">
-            <span className="home-text01">{timestamp.slice(1,30)}</span>
-            <span className="home-text02">
-              <span>Threat Detected</span>
-              <br></br>
-              <span>Confidence Interval : {ConfidenceInterval.slice(2,4)}%</span>
-              <br></br>
-            </span>
           </div>
         </div>
         <div className="home-container05">
