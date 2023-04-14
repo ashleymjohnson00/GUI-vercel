@@ -10,11 +10,19 @@ import { useRouter } from 'next/router';
 
 const Home = (props) => {
   async function addUpdate(time){
-    const location = document.getElementsByClassName("home-container03")
+    const location = document.getElementById("alert-container")
     console.log("add update")
-    const newTimeStamp = document.createElement('div')
-    newTimeStamp.className === 'home-text01'
-    newTimeStamp.innerText === {time}
+    const updateTime = document.createElement('div')
+    updateTime.className = 'home-text01'
+    updateTime.innerText = 'test'
+    console.log(location)
+    console.log(updateTime)
+    location.insertAdjacentElement('afterbegin', updateTime)
+    const updateConfidence = document.createElement('div')
+    updateConfidence.className = 'home-text02'
+    updateConfidence.innerText = '100'
+    location.insertAdjacentElement('beforeend', updateConfidence)
+    
   
   }
 
@@ -40,7 +48,7 @@ const Home = (props) => {
 
      
 
-    }).catch(err => console.log("test"))
+    }).catch(err => console.log("Failed to reach server"))
   }, 500);
 },[])
   const [timestamp, setTs] = useState([{}]);
@@ -50,7 +58,7 @@ const Home = (props) => {
     ).then(timestamp => {
       setTs(timestamp)
       console.log(timestamp)
-    }).catch(err => console.log("test"))
+    }).catch(err => console.log("Failed to reach server"))
   
    },[]
   )
@@ -93,6 +101,9 @@ const Home = (props) => {
           <div className="home-container03">
             <h1 className="home-text">Updates</h1>
           </div>
+          <div id="alert-container" className="home-container04 textarea">  
+            <br id="update-break"></br>
+          </div>
         </div>
         <div className="home-container05">
           <iframe
@@ -118,8 +129,8 @@ const Home = (props) => {
               <div className="home-container09">
                 <span className="home-text13">Alert Controls</span>
                 <div className="home-container10">
-                  <button onClick={() => addToast("Warning: Threat Detected!", { appearance: "error" })}>
-                    Warn!
+                  <button onClick={addUpdate}>
+                    test
                   </button>
                 </div>
               </div>
