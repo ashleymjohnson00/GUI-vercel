@@ -8,22 +8,42 @@ import { useRouter } from 'next/router';
 
 
 
+
 const Home = (props) => {
-  async function addUpdate(time){
-    const location = document.getElementById("alert-container")
-    console.log("add update")
-    const updateTime = document.createElement('div')
-    updateTime.className = 'home-text01'
-    updateTime.innerText = 'test'
-    console.log(location)
-    console.log(updateTime)
-    location.insertAdjacentElement('afterbegin', updateTime)
-    const updateConfidence = document.createElement('div')
-    updateConfidence.className = 'home-text02'
-    updateConfidence.innerText = '100'
-    location.insertAdjacentElement('beforeend', updateConfidence)
-    
+  async function addUpdateTime(time){
+    // const location = document.getElementById("alert-container")
+    // const updateTime = document.createElement('div')
+    // updateTime.className = 'home-text01'
+    // updateTime.innerText = time
+    // location.insertAdjacentElement('afterbegin', updateTime)
   
+  }
+
+  function timeout(delay) {
+    return new Promise( res=> setTimeout(res,delay))
+  }
+
+  async function addUpdateConfidence(confidence,time){
+    
+
+    const locationOfNewUpdate = document.getElementById("Updates-Sidebar")
+    const newUpdateBlock = document.createElement('div')
+    const updateConfidence = document.createElement('div')
+    const updateTime = document.createElement('div')
+
+    newUpdateBlock.id = "alert-container1"
+    newUpdateBlock.className = "jsx-7dfabcf986167176 home-container04 textarea"
+    updateConfidence.className = 'home-text02'
+    updateConfidence.innerText = confidence
+    updateTime.className = 'home-text01'
+    updateTime.innerText = time
+    console.log('current time',timestamp)
+
+    console.log("current confidence",confidence)
+    locationOfNewUpdate.insertAdjacentElement('beforeend', newUpdateBlock)
+    newUpdateBlock.insertAdjacentElement('beforeend', updateConfidence)
+    newUpdateBlock.insertAdjacentElement('afterbegin', updateTime)
+    console.log('test to see', timestamp)
   }
 
   const router = useRouter();
@@ -36,15 +56,15 @@ const Home = (props) => {
      }).then(
       res => res.text()
     ).then(ConfidenceInterval => {
-      console.log(getCI.statusCode)
+      const splitFetch = ConfidenceInterval.split(',')
+      console.log("split fetch",splitFetch)
       setData(ConfidenceInterval)
       if(ConfidenceInterval != previousConfidence){
         addToast("Warning: Threat Detected!", { appearance: "error" })
-        addUpdate(ConfidenceInterval)
+        addUpdateConfidence(splitFetch[0], splitFetch[1])
         
       }
       previousConfidence = ConfidenceInterval
-      console.log(ConfidenceInterval)
 
      
 
@@ -57,9 +77,8 @@ const Home = (props) => {
       res => res.text()
     ).then(timestamp => {
       setTs(timestamp)
-      console.log(timestamp)
     }).catch(err => console.log("Failed to reach server"))
-  
+    
    },[]
   )
  
@@ -101,8 +120,14 @@ const Home = (props) => {
           <div className="home-container03">
             <h1 className="home-text">Updates</h1>
           </div>
-          <div id="alert-container" className="home-container04 textarea">  
-            <br id="update-break"></br>
+          <div id="alert-container" className="home-container04 textarea">
+            <span className="home-text01">{timestamp.slice(1,30)}</span>
+            <span className="home-text02">
+              <span>Threat Detected</span>
+              <br></br>
+              <span>Confidence Interval : {ConfidenceInterval.slice(2,4)}%</span>
+              <br></br>
+            </span>
           </div>
         </div>
         <div className="home-container05">
@@ -129,7 +154,7 @@ const Home = (props) => {
               <div className="home-container09">
                 <span className="home-text13">Alert Controls</span>
                 <div className="home-container10">
-                  <button onClick={addUpdate}>
+                  <button onClick={addUpdateConfidence}>
                     test
                   </button>
                 </div>
