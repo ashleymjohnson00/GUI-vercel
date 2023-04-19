@@ -120,6 +120,15 @@ const Home = (props) => {
           <div className="home-container03">
             <h1 className="home-text">Updates</h1>
           </div>
+          <div id="alert-container" className="home-container04 textarea">
+            <span className="home-text01">{timestamp.slice(1,30)}</span>
+            <span className="home-text02">
+              <span>Threat Detected</span>
+              <br></br>
+              <span>Confidence Interval : {ConfidenceInterval.slice(2,4)}%</span>
+              <br></br>
+            </span>
+          </div>
         </div>
         <div className="home-container05">
           <iframe
