@@ -180,7 +180,7 @@ const Home = (props) => {
               Contact Authorities
             </a>
             <span className="home-text17">
-              If the AI detects a firearm, our system will alert the security
+              If the AI detects a firearm, our system will alert the securit
               team through the preferred contact method as well as send the
               alert to the updates tab to the right. If an alert of a possible
               weapon threat is confirmed by a security team member, the button
