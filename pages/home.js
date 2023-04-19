@@ -32,8 +32,8 @@ const Home = (props) => {
     const updateTime = document.createElement('div')
 
     newUpdateBlock.id = "alert-container1"
-    newUpdateBlock.className = " jsx-8e9ca590acda18ec home-container04 textarea"
-    updateConfidence.className = 'home-text02'
+    newUpdateBlock.className = "jsx-7dfabcf986167176 home-container04 textarea"
+    updateConfidence.className = 'jsx-8e9ca590acda18ec'
     updateConfidence.innerText = confidence
     updateTime.className = 'home-text01'
     updateTime.innerText = time
@@ -120,15 +120,6 @@ const Home = (props) => {
           <div className="home-container03">
             <h1 className="home-text">Updates</h1>
           </div>
-          <div id="alert-container" className="home-container04 textarea">
-            <span className="home-text01">{timestamp.slice(1,30)}</span>
-            <span className="home-text02">
-              <span>Threat Detected</span>
-              <br></br>
-              <span>Confidence Interval : {ConfidenceInterval.slice(2,4)}%</span>
-              <br></br>
-            </span>
-          </div>
         </div>
         <div className="home-container05">
           <iframe
@@ -146,7 +137,7 @@ const Home = (props) => {
                 <br></br>
               </span>
               <span className="home-text10">
-                <span className="home-text11">{ConfidenceInterval.slice(2,4)}%</span>
+                <span className="home-text11">{ConfidenceInterval.slice(1,3)}%</span>
                 <br></br>
               </span>
             </div>
@@ -165,7 +156,7 @@ const Home = (props) => {
                   <span className="home-text15">Lobby</span>
                 </div>
                 <div className="home-container13">
-                  <span className="home-text16">{timestamp.slice(1,30)}</span>
+                  <span className="home-text16">{timestamp.slice(1)}</span>
                 </div>
               </div>
             </div>
@@ -456,8 +447,6 @@ const Home = (props) => {
             width: 100%;
             height: 50%;
             border-radius: var(--dl-radius-radius-radius8);
-            border-color: var(--dl-color-logocolors-lightblue3);
-            border-width: 4px;
           }
           .home-container06 {
             flex: 0 0 auto;
