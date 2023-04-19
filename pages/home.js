@@ -35,7 +35,7 @@ const Home = (props) => {
     newUpdateBlock.className = "jsx-995eb02703ef871d home-container04 textarea"
     updateConfidence.className = 'jsx-995eb02703ef871d'
     updateConfidence.innerText = confidence
-    updateTime.className = 'jsx-995eb02703ef871d home-text02'
+    updateTime.className = 'jsx-995eb02703ef871d home-text01'
     updateTime.innerText = time
     console.log('current time',timestamp)
 
