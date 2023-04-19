@@ -132,7 +132,12 @@ const Home = (props) => {
         </div>
         <div className="home-container05">
           <iframe
-            seamless src="https://logrocket.com/"
+            src="https://giphy.com/embed/ipta0C5NK3oX8YFLH5"
+            width="100%" height="50%"
+            frameBorder="0" 
+            class="giphy-embed" 
+            allowFullScreen
+            className="home-iframe"
           ></iframe>
           <div className="home-container06">
             <div className="home-container07">
