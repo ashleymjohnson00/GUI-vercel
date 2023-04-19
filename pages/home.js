@@ -152,7 +152,7 @@ const Home = (props) => {
             </div>
             <div className="home-container08">
               <div className="home-container09">
-                <span className="home-text13">Alert Controls</span>
+                <span className="home-text13">Alert Control</span>
                 <div className="home-container10">
                   <button onClick={addUpdateConfidence}>
                     test
