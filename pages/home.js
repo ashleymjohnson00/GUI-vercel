@@ -456,6 +456,8 @@ const Home = (props) => {
             width: 100%;
             height: 50%;
             border-radius: var(--dl-radius-radius-radius8);
+            border-color: var(--dl-color-logocolors-lightblue3);
+            border-width: 4px;
           }
           .home-container06 {
             flex: 0 0 auto;
