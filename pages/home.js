@@ -123,6 +123,8 @@ const Home = (props) => {
           <div id="alert-container" className="home-container04 textarea" style={{display: 'none'}}>
             <span className="home-text01">{timestamp.slice(1,30)}</span>
             <span className="home-text02">
+              <span>{timestamp.slice(1,30)}</span>
+              <br></br>
               <span>Threat Detected</span>
               <br></br>
               <span>Confidence Interval : {ConfidenceInterval.slice(2,4)}%</span>
@@ -180,7 +182,7 @@ const Home = (props) => {
               Contact Authorities
             </a>
             <span className="home-text17">
-              If the AI detects a firearm, our system will alert the securit
+              If the AI detects a firearm, our system will alert the security
               team through the preferred contact method as well as send the
               alert to the updates tab to the right. If an alert of a possible
               weapon threat is confirmed by a security team member, the button
