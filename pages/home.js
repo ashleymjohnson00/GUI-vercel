@@ -165,7 +165,7 @@ const Home = (props) => {
                   <span className="home-text15">Lobby</span>
                 </div>
                 <div className="home-container13">
-                  <span className="home-text16">{time}</span>
+                  <span className="home-text16">{}</span>
                 </div>
               </div>
             </div>
