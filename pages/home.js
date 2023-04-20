@@ -32,10 +32,10 @@ const Home = (props) => {
     const updateTime = document.createElement('div')
 
     newUpdateBlock.id = "alert-container1"
-    newUpdateBlock.className = "jsx-995eb02703ef871d home-container04 textarea"
-    updateConfidence.className = 'jsx-995eb02703ef871d home-text02'
+    newUpdateBlock.className = "jsx-8e9ca590acda18ec home-container04 textarea"
+    updateConfidence.className = 'jsx-8e9ca590acda18ec'
     updateConfidence.innerText = confidence
-    updateTime.className = 'jsx-995eb02703ef871d home-text01'
+    updateTime.className = 'home-text01'
     updateTime.innerText = time
     console.log('current time',timestamp)
 
@@ -49,6 +49,7 @@ const Home = (props) => {
   const router = useRouter();
   const { addToast } = useToasts();
   const previousConfidence = ""
+  const timestamp1 = ""
   const [ConfidenceInterval, setData] = useState([{}]);
   useEffect(() => {
      const interval = setInterval(() => {
@@ -62,10 +63,10 @@ const Home = (props) => {
       if(ConfidenceInterval != previousConfidence){
         addToast("Warning: Threat Detected!", { appearance: "error" })
         addUpdateConfidence(splitFetch[0], splitFetch[1])
+        global.time = splitFetch[1]
         
       }
       previousConfidence = ConfidenceInterval
-
      
 
     }).catch(err => console.log("Failed to reach server"))
@@ -121,7 +122,6 @@ const Home = (props) => {
             <h1 className="home-text">Updates</h1>
           </div>
           <div id="alert-container" className="home-container04 textarea" style={{display: 'none'}}>
-            <span className="home-text01">{timestamp.slice(1,30)}</span>
             <span className="home-text02">
               <span>{timestamp.slice(1,30)}</span>
               <br></br>
@@ -154,7 +154,7 @@ const Home = (props) => {
             </div>
             <div className="home-container08">
               <div className="home-container09">
-                <span className="home-text13">Alert Control</span>
+                <span className="home-text13">Alert Controls</span>
                 <div className="home-container10">
                   <button onClick={addUpdateConfidence}>
                     test
@@ -167,7 +167,7 @@ const Home = (props) => {
                   <span className="home-text15">Lobby</span>
                 </div>
                 <div className="home-container13">
-                  <span className="home-text16">{timestamp.slice(1)}</span>
+                  <span className="home-text16">{time}</span>
                 </div>
               </div>
             </div>
