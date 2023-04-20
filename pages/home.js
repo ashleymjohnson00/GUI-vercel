@@ -32,10 +32,10 @@ const Home = (props) => {
     const updateTime = document.createElement('div')
 
     newUpdateBlock.id = "alert-container1"
-    newUpdateBlock.className = "jsx-8e9ca590acda18ec home-container04 textarea"
-    updateConfidence.className = 'jsx-8e9ca590acda18ec'
+    newUpdateBlock.className = "jsx-995eb02703ef871d home-container04 textarea"
+    updateConfidence.className = 'jsx-995eb02703ef871d home-text02'
     updateConfidence.innerText = confidence
-    updateTime.className = 'home-text01'
+    updateTime.className = 'jsx-995eb02703ef871d home-text01'
     updateTime.innerText = time
     console.log('current time',timestamp)
 
@@ -153,7 +153,7 @@ const Home = (props) => {
             </div>
             <div className="home-container08">
               <div className="home-container09">
-                <span className="home-text13">Alert Controls</span>
+                <span className="home-text13">Alert Control</span>
                 <div className="home-container10">
                   <button onClick={addUpdateConfidence}>
                     test
