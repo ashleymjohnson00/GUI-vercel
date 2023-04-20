@@ -134,10 +134,8 @@ const Home = (props) => {
         </div>
         <div className="home-container05">
           <iframe
-            src="https://giphy.com/embed/ipta0C5NK3oX8YFLH5"
-            width="100%" height="50%"
-            frameBorder="0" 
-            class="giphy-embed" 
+            src="https://www.youtube.com/embed/0GOgiJlHkcY"
+            width="100%" height="50%" 
             allowFullScreen
             className="home-iframe"
           ></iframe>
@@ -455,9 +453,11 @@ const Home = (props) => {
             justify-content: flex-start;
           }
           .home-iframe {
-            width: 100%;
+            width: 90%;
             height: 50%;
             border-radius: var(--dl-radius-radius-radius8);
+            border-color: #266d86;
+            border-width: 10px;
           }
           .home-container06 {
             flex: 0 0 auto;
