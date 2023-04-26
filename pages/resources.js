@@ -28,9 +28,6 @@ const Resources = (props) => {
             <Link href="/resources" id="resourcesNav" name="Resources button">
               <a className="resources-link2 heading2 button">Resources</a>
             </Link>
-            <Link href="/history" id="HistoryNav" name="Home button">
-              <a className="resources-link3 button heading2">History</a>
-            </Link>
             <Link href="/update-info" id="UpdateNav" name="Update button">
               <a className="resources-link4 heading2 button">Update Info</a>
             </Link>
@@ -114,7 +111,7 @@ const Resources = (props) => {
           }
           .resources-container2 {
             right: var(--dl-space-space-fourunits);
-            width: 641px;
+            width: 472px;
             bottom: 0px;
             height: 40px;
             margin: auto;
