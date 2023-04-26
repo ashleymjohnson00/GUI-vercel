@@ -245,7 +245,7 @@ const Home = (props) => {
           }
           .home-container02 {
             right: var(--dl-space-space-fourunits);
-            width: 460px;
+            width: 470px;
             bottom: 0px;
             height: 40px;
             margin: auto;
