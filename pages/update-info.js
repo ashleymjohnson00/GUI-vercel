@@ -478,6 +478,7 @@ const UpdateInfo = (props) => {
             display: flex;
             position: relative;
             margin-top: var(--dl-space-space-fiveunits);
+            margin-bottom: var(--dl-space-space-fiveunits);
             align-items: center;
             border-color: var(--dl-color-logocolors-yellow);
             border-style: solid;
