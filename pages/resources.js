@@ -51,7 +51,7 @@ const Resources = (props) => {
         </header>
         <div className="resources-container5">
           <iframe
-            src="https://www.africau.edu/images/default/sample.pdf"
+            src= "https://docs.google.com/document/d/17vzDKUdggI5eswotb43XBb45P61pfXSQMxBYt0LVP_0/edit?embedded=true"
             className="resources-iframe"
           ></iframe>
         </div>
