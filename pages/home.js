@@ -109,9 +109,6 @@ const Home = (props) => {
             <Link href="/resources" id="resourceNav" name="Resources button">
               <a className="home-link2 button heading2">Resources</a>
             </Link>
-            {/* <Link href="/history" id="historyNav" name="History button">
-              <a className="home-link3 heading2 button">History</a>
-            </Link> */}
             <Link href="/update-info" id="updateNav" name="Update button">
               <a className="home-link4 button">Update Info</a>
             </Link>
