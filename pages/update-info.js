@@ -27,9 +27,6 @@ const UpdateInfo = (props) => {
             <Link href="/resources" id="Navigation" name="Home button">
               <a className="update-info-link2 button heading2">Resources</a>
             </Link>
-            <Link href="/history" id="Navigation" name="Home button">
-              <a className="update-info-link3 button heading2">History</a>
-            </Link>
             <Link href="/update-info" id="Navigation" name="Home button">
               <a className="update-info-link4 heading2 button">Update Info</a>
             </Link>
@@ -205,7 +202,7 @@ const UpdateInfo = (props) => {
           }
           .update-info-container02 {
             right: var(--dl-space-space-fourunits);
-            width: 641px;
+            width: 472px;
             bottom: 0px;
             height: 40px;
             margin: auto;
