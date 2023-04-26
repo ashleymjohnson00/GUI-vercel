@@ -149,62 +149,7 @@ const UpdateInfo = (props) => {
             <option value="GMT-5">Eastern Standard Time (GMT-5)</option>
           </select>
         </div>
-        <div className="update-info-container10">
-          <h1 className="update-info-text14">
-            <span className="Heading"> Up</span>
-            <span>date user&apos;s Information</span>
-          </h1>
-          <img
-            alt="image"
-            src="/playground_assets/untitled%20drawing%20%5B2%5D.svg"
-            className="update-info-image5"
-          />
-          <img
-            alt="image"
-            src="/playground_assets/untitled%20drawing%20%5B2%5D.svg"
-            className="update-info-image6"
-          />
-          <span className="update-info-text17">Update User Password</span>
-          <Link href="/update-info" name="password submit button">
-            <a className="update-info-link7 button heading2">Save</a>
-          </Link>
-          <div className="update-info-container11">
-            <span className="update-info-text18">Current Password:</span>
-            <input
-              type="password"
-              name="userPass"
-              maxlength="20"
-              minlength="6"
-              placeholder="*************"
-              autoComplete="current-password"
-              className="update-info-textinput4 input"
-            />
-          </div>
-          <div className="update-info-container12">
-            <span className="update-info-text19">Updated Password:</span>
-            <input
-              type="password"
-              name="userPass"
-              maxlength="20"
-              minlength="6"
-              placeholder="*************"
-              autoComplete="new-password"
-              className="update-info-textinput5 input"
-            />
-          </div>
-          <div className="update-info-container13">
-            <span className="update-info-text20">Re-type Password:</span>
-            <input
-              type="password"
-              name="userPass"
-              maxlength="20"
-              minlength="6"
-              placeholder="*************"
-              autoComplete="new-password"
-              className="update-info-textinput6 input"
-            />
-          </div>
-        </div>
+
         <footer className="update-info-footer">
           <span className="update-info-text21">
             Website created by BAJA Security
