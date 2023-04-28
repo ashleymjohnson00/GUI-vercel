@@ -334,7 +334,7 @@ const Resources = (props) => {
             height: 100%;
             margin-top: var(--dl-space-space-fiveunits);
             margin-bottom: var(--dl-space-space-fiveunits);
-            border-radius: var(--dl-radius-radius-radius8);
+            /* border-radius: var(--dl-radius-radius-radius8); */
           }
           .resources-footer {
             flex: 1;
