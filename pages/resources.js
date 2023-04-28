@@ -333,7 +333,7 @@ const Resources = (props) => {
             width: 995px;
             height: 100%;
             margin-top: var(--dl-space-space-fiveunits);
-            padding-top: 3px;
+            margin-bottom: var(--dl-space-space-fiveunits);
             border-radius: var(--dl-radius-radius-radius8);
           }
           .resources-footer {
