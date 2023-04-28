@@ -53,7 +53,6 @@ const Resources = (props) => {
           <iframe
             src= "https://docs.google.com/document/d/e/2PACX-1vSPcT5-KutfVb9DdpOo9-IiikcibSYulNh69EoRaEdnz0oMAeuX4vf0M_0vR0HjuOwF8P6W5i_rkcVo/pub?embedded=true"
             className="resources-iframe"
-            style="height: -webkit-fill-available"
           ></iframe>
         </div>
         <footer className="resources-footer">
@@ -331,7 +330,8 @@ const Resources = (props) => {
           }
           .resources-iframe {
             flex: 1;
-            width: 995px;
+            width: 800px;
+            height: 100%;
             margin-top: var(--dl-space-space-fiveunits);
             margin-bottom: var(--dl-space-space-fiveunits);
             border-radius: var(--dl-radius-radius-radius8);
