@@ -330,7 +330,7 @@ const Resources = (props) => {
           }
           .resources-iframe {
             flex: 1;
-            width: 800px;
+            width: 100%;
             height: 100%;
             margin-top: var(--dl-space-space-fiveunits);
             margin-bottom: var(--dl-space-space-fiveunits);
