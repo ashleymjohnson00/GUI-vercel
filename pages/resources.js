@@ -36,7 +36,7 @@ const Resources = (props) => {
         <header className="resources-container3">
           <div className="resources-container4">
             <Link href="/resources" id="pdf-0Nav" name="pdf-0 button">
-              <a className="resources-link5 heading2 button">Assembly Manual</a>
+              <a className="resources-link5 heading2 button">Executive Summary</a>
             </Link>
             <Link href="/pdf-2" id="pdf-2Nav" name="pdf-2 button">
               <a className="resources-link6 button heading2">Other Doc</a>
