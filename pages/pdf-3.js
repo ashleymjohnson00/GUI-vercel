@@ -28,9 +28,6 @@ const Pdf3 = (props) => {
             <Link href="/resources" id="resourcesNav" name="Resources button">
               <a className="pdf3-link2 heading2 button">Resources</a>
             </Link>
-            <Link href="/history" id="historyNav" name="Rsources button">
-              <a className="pdf3-link3 button heading2">History</a>
-            </Link>
             <Link href="/update-info" id="updateNav" name="Update button">
               <a className="pdf3-link4 button heading2">Update Info</a>
             </Link>
@@ -113,7 +110,7 @@ const Pdf3 = (props) => {
           }
           .pdf3-container2 {
             right: var(--dl-space-space-fourunits);
-            width: 641px;
+            width: 472px;
             bottom: 0px;
             height: 40px;
             margin: auto;

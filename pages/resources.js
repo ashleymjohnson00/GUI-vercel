@@ -28,9 +28,6 @@ const Resources = (props) => {
             <Link href="/resources" id="resourcesNav" name="Resources button">
               <a className="resources-link2 heading2 button">Resources</a>
             </Link>
-            <Link href="/history" id="HistoryNav" name="Home button">
-              <a className="resources-link3 button heading2">History</a>
-            </Link>
             <Link href="/update-info" id="UpdateNav" name="Update button">
               <a className="resources-link4 heading2 button">Update Info</a>
             </Link>
@@ -39,7 +36,7 @@ const Resources = (props) => {
         <header className="resources-container3">
           <div className="resources-container4">
             <Link href="/resources" id="pdf-0Nav" name="pdf-0 button">
-              <a className="resources-link5 heading2 button">Assembly Manual</a>
+              <a className="resources-link5 heading2 button">Executive Summary</a>
             </Link>
             <Link href="/pdf-2" id="pdf-2Nav" name="pdf-2 button">
               <a className="resources-link6 button heading2">Other Doc</a>
@@ -54,7 +51,7 @@ const Resources = (props) => {
         </header>
         <div className="resources-container5">
           <iframe
-            src="https://www.africau.edu/images/default/sample.pdf"
+            src= "https://docs.google.com/document/d/e/2PACX-1vSPcT5-KutfVb9DdpOo9-IiikcibSYulNh69EoRaEdnz0oMAeuX4vf0M_0vR0HjuOwF8P6W5i_rkcVo/pub?embedded=true"
             className="resources-iframe"
           ></iframe>
         </div>
@@ -114,7 +111,7 @@ const Resources = (props) => {
           }
           .resources-container2 {
             right: var(--dl-space-space-fourunits);
-            width: 641px;
+            width: 472px;
             bottom: 0px;
             height: 40px;
             margin: auto;
@@ -333,10 +330,10 @@ const Resources = (props) => {
           }
           .resources-iframe {
             flex: 1;
-            width: 995px;
+            width: 850px;
             height: 100%;
             margin-top: var(--dl-space-space-fiveunits);
-            padding-top: 3px;
+            margin-bottom: var(--dl-space-space-fiveunits);
             border-radius: var(--dl-radius-radius-radius8);
           }
           .resources-footer {

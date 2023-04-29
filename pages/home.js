@@ -109,9 +109,9 @@ const Home = (props) => {
             <Link href="/resources" id="resourceNav" name="Resources button">
               <a className="home-link2 button heading2">Resources</a>
             </Link>
-            <Link href="/history" id="historyNav" name="History button">
+            {/* <Link href="/history" id="historyNav" name="History button">
               <a className="home-link3 heading2 button">History</a>
-            </Link>
+            </Link> */}
             <Link href="/update-info" id="updateNav" name="Update button">
               <a className="home-link4 button">Update Info</a>
             </Link>
@@ -245,7 +245,7 @@ const Home = (props) => {
           }
           .home-container02 {
             right: var(--dl-space-space-fourunits);
-            width: 641px;
+            width: 472px;
             bottom: 0px;
             height: 40px;
             margin: auto;
