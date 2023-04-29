@@ -53,7 +53,7 @@ const Home = (props) => {
   const [ConfidenceInterval, setData] = useState([{}]);
   useEffect(() => {
      const interval = setInterval(() => {
-     const getCI = fetch("http://localhost:5000/Threats",{
+     const getCI = fetch("https://bajaserver-ashleymjohnson00-baja.vercel.app/Threats",{
      }).then(
       res => res.text()
     ).then(ConfidenceInterval => {
@@ -74,7 +74,7 @@ const Home = (props) => {
 },[])
   const [timestamp, setTs] = useState([{}]);
   useEffect(() => {
-      const getTs = fetch("http://localhost:5000/timestamp").then(
+      const getTs = fetch("https://bajaserver-ashleymjohnson00-baja.vercel.app/timestamp").then(
       res => res.text()
     ).then(timestamp => {
       setTs(timestamp)
