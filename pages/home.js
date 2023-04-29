@@ -32,7 +32,7 @@ const Home = (props) => {
     const updateTime = document.createElement('div')
 
     newUpdateBlock.id = "alert-container1"
-    newUpdateBlock.className = "jsx-8e9ca590acda18ec home-container04 textarea"
+    newUpdateBlock.className = "jsx-e7eb81543aeba56e home-container04 textarea"
     updateConfidence.className = 'jsx-8e9ca590acda18ec'
     updateConfidence.innerText = confidence
     updateTime.className = 'home-text01'
