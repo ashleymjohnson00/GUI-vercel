@@ -153,9 +153,15 @@ const Home = (props) => {
               <div className="home-container09">
                 <span className="home-text13">Alert Controls</span>
                 <div className="home-container10">
-                  <button onClick={addUpdateConfidence}>
-                    test
-                  </button>
+                <input
+                  type="number"
+                  max="100"
+                  min="0"
+                  name="confidence interval"
+                  step="1"
+                  placeholder="XX %"
+                  className="update-info-textinput input"
+                />
                 </div>
               </div>
               <div className="home-container11">
@@ -164,7 +170,7 @@ const Home = (props) => {
                   <span className="home-text15">{}</span>
                 </div>
                 <div className="home-container13">
-                  <span className="home-text16">Lobby</span>
+                  <span className="home-text16">Location: Lobby</span>
                 </div>
               </div>
             </div>
