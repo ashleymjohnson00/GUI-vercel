@@ -22,10 +22,9 @@ const Home = (props) => {
   function timeout(delay) {
     return new Promise( res=> setTimeout(res,delay))
   }
-
   async function addUpdateConfidence(confidence,time){
     
-
+    
     const locationOfNewUpdate = document.getElementById("Updates-Sidebar")
     const newUpdateBlock = document.createElement('div')
     const updateConfidence = document.createElement('div')
@@ -34,10 +33,13 @@ const Home = (props) => {
     newUpdateBlock.id = "alert-container1"
     newUpdateBlock.className = "jsx-e7eb81543aeba56e home-container04 textarea"
     updateConfidence.className = 'jsx-e7eb81543aeba56e'
-    updateConfidence.innerText = confidence
+    updateConfidence.innerText = confidence.slice(1)
     updateTime.className = 'home-text01'
-    updateTime.innerText = time
-    console.log('current time',timestamp)
+    updateTime.innerText = time.slice(1,29)
+    console.log("refreshing")
+    var photo = document.getElementById("threatPhoto")
+    photo.src = photo.src;
+    
 
     console.log("current confidence",confidence)
     locationOfNewUpdate.insertAdjacentElement('beforeend', newUpdateBlock)
@@ -49,7 +51,6 @@ const Home = (props) => {
   const router = useRouter();
   const { addToast } = useToasts();
   const previousConfidence = ""
-  const timestamp1 = ""
   const [ConfidenceInterval, setData] = useState([{}]);
   useEffect(() => {
      const interval = setInterval(() => {
@@ -60,18 +61,23 @@ const Home = (props) => {
       const splitFetch = ConfidenceInterval.split(',')
       console.log("split fetch",splitFetch)
       setData(ConfidenceInterval)
+      console.log("The threat data:", ConfidenceInterval.slice(1))
       if(ConfidenceInterval != previousConfidence){
         addToast("Warning: Threat Detected!", { appearance: "error" })
-        addUpdateConfidence(splitFetch[0], splitFetch[1])
+        var timeStamp = splitFetch[1] + splitFetch[2]
+        addUpdateConfidence(splitFetch[0], timeStamp)
         global.time = splitFetch[1]
+      
         
       }
+      
       previousConfidence = ConfidenceInterval
      
 
     }).catch(err => console.log("Failed to reach server"))
   }, 500);
 },[])
+
   const [timestamp, setTs] = useState([{}]);
   useEffect(() => {
       const getTs = fetch("https://bajaserver-ashleymjohnson00-baja.vercel.app/timestamp").then(
@@ -123,18 +129,21 @@ const Home = (props) => {
           </div>
           <div id="alert-container" className="home-container04 textarea" style={{display: 'none'}}>
             <span className="home-text02">
-              <span>{timestamp.slice(1,30)}</span>
+              <span>Time</span>
               <br></br>
               <span>Threat Detected</span>
               <br></br>
-              <span>Confidence Interval : {ConfidenceInterval.slice(2,4)}%</span>
+              <span>Confidence Interval : {ConfidenceInterval.slice(4)}%</span>
               <br></br>
             </span>
           </div>
         </div>
         <div className="home-container05">
           <iframe
-            src="https://bajaserver-ashleymjohnson00-baja.vercel.app/image"
+            name='threatPhoto'
+            id ="threatPhoto"
+            src= "https://bajaserver-ashleymjohnson00-baja.vercel.app/image"
+            width="100%" height="50%" 
             allowFullScreen
             className="home-iframe"
           ></iframe>
@@ -145,7 +154,7 @@ const Home = (props) => {
                 <br></br>
               </span>
               <span className="home-text10">
-                <span className="home-text11">{ConfidenceInterval.slice(1,3)}%</span>
+                <span className="home-text11">{ConfidenceInterval.slice(2,7)}</span>
                 <br></br>
               </span>
             </div>
