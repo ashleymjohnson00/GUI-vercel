@@ -162,19 +162,25 @@ const Home = (props) => {
               <div className="home-container09">
                 <span className="home-text13">Alert Controls</span>
                 <div className="home-container10">
-                  <button onClick={addUpdateConfidence}>
-                    test
-                  </button>
+                <input
+                  type="number"
+                  max="100"
+                  min="0"
+                  name="confidence interval"
+                  step="1"
+                  placeholder="XX %"
+                  className="update-info-textinput input"
+                  margin="25px"
+                />
                 </div>
               </div>
               <div className="home-container11">
                 <div className="home-container12">
-                  <span className="home-text14">Camera Location:</span>
-                  <span className="home-text15">Lobby</span>
+                  <span className="home-text14">Timestamp:</span>
+                  <span className="home-text15">{}</span>
                 </div>
                 <div className="home-container13">
-                  
-                  <span className="home-text16">{ConfidenceInterval.slice(13,29)}</span>
+                  <span className="home-text16">Location: Lobby</span>
                 </div>
               </div>
             </div>
@@ -361,7 +367,7 @@ const Home = (props) => {
           }
           .home-sidebar {
             width: 25%;
-            height: 1188px;
+            height: 1700px;
             display: flex;
             z-index: 2;
             align-self: flex-end;
@@ -446,7 +452,7 @@ const Home = (props) => {
             left: 0px;
             width: 75%;
             bottom: 0px;
-            height: 1186px;
+            height: 1700px;
             display: flex;
             position: absolute;
             align-self: flex-start;
@@ -462,9 +468,10 @@ const Home = (props) => {
             justify-content: flex-start;
           }
           .home-iframe {
-            width: 90%;
-            height: 50%;
+            width: 1050px;
+            height: 1060px;
             border-radius: var(--dl-radius-radius-radius8);
+            padding: var(--dl-space-space-halfunit);
             border-color: #266d86;
             border-width: 10px;
           }
