@@ -452,7 +452,7 @@ const Home = (props) => {
             justify-content: flex-start;
           }
           .home-iframe {
-            width: 1100x;
+            width: 1100px;
             height: 1100px;
             border-radius: var(--dl-radius-radius-radius8);
             border-color: #266d86;
