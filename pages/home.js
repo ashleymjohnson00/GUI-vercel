@@ -471,7 +471,7 @@ const Home = (props) => {
           }
           .home-iframe {
             width: 1050px;
-            height: 900px;
+            height: 700px;
             border-radius: var(--dl-radius-radius-radius8);
             padding: var(--dl-space-space-halfunit);
             border-color: #266d86;
