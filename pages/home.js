@@ -135,7 +135,6 @@ const Home = (props) => {
         <div className="home-container05">
           <iframe
             src="https://bajaserver-ashleymjohnson00-baja.vercel.app/image"
-            width="1000px" height="1000px" 
             allowFullScreen
             className="home-iframe"
           ></iframe>
@@ -453,8 +452,8 @@ const Home = (props) => {
             justify-content: flex-start;
           }
           .home-iframe {
-            width: 90%;
-            height: 50%;
+            width: 1000px;
+            height: 1000px;
             border-radius: var(--dl-radius-radius-radius8);
             border-color: #266d86;
             border-width: 10px;
