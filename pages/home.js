@@ -351,7 +351,7 @@ const Home = (props) => {
           }
           .home-sidebar {
             width: 25%;
-            height: 1500px;
+            height: 1600px;
             display: flex;
             z-index: 2;
             align-self: flex-end;
@@ -436,7 +436,7 @@ const Home = (props) => {
             left: 0px;
             width: 75%;
             bottom: 0px;
-            height: 1500px;
+            height: 1600px;
             display: flex;
             position: absolute;
             align-self: flex-start;
@@ -453,7 +453,7 @@ const Home = (props) => {
           }
           .home-iframe {
             width: 1050px;
-            height: 1050px;
+            height: 1100px;
             border-radius: var(--dl-radius-radius-radius8);
             border-color: #266d86;
             border-width: 10px;
