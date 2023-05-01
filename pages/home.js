@@ -453,7 +453,7 @@ const Home = (props) => {
           }
           .home-iframe {
             width: 1050px;
-            height: 1100px;
+            height: 1075px;
             border-radius: var(--dl-radius-radius-radius8);
             border-color: #266d86;
             border-width: 10px;
