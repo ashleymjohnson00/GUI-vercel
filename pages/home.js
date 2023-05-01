@@ -186,7 +186,7 @@ const Home = (props) => {
               above could be used to contact proper authorities and subdue the
               threat as soon as possible. This button is here for demo purposes
               and does not currently contact actual help. the link leads to
-              CSPD&apos;s website.
+              CSPD&apos;s website.!
             </span>
           </div>
         </div>
