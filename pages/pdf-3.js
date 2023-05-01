@@ -329,10 +329,10 @@ const Pdf3 = (props) => {
           }
           .pdf3-iframe {
             flex: 1;
-            width: 995px;
+            width: 850px;
             height: 100%;
             margin-top: var(--dl-space-space-fiveunits);
-            padding-top: 3px;
+            margin-bottom: var(--dl-space-space-fiveunits);
             border-radius: var(--dl-radius-radius-radius8);
           }
           .pdf3-footer {
