@@ -152,6 +152,7 @@ const Home = (props) => {
             <div className="home-container08">
               <div className="home-container09">
                 <span className="home-text13">Alert Controls</span>
+                <br></br>
                 <div className="home-container10">
                 <input
                   type="number"
@@ -584,7 +585,7 @@ const Home = (props) => {
           }
           .home-text14 {
             color: var(--dl-color-gray-white);
-            font-size: 23px;
+            font-size: 21px;
           }
           .home-text15 {
             color: var(--dl-color-logocolors-lightblue3);
