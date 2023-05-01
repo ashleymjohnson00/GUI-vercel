@@ -161,7 +161,7 @@ const Home = (props) => {
                   step="1"
                   placeholder="XX %"
                   className="update-info-textinput input"
-                  margin="15px"
+                  margin="25px"
                 />
                 </div>
               </div>
