@@ -146,6 +146,7 @@ const Home = (props) => {
             width="100%" height="50%" 
             allowFullScreen
             className="home-iframe"
+            scrolling="no"
           ></iframe>
           <div className="home-container06">
             <div className="home-container07">
@@ -470,7 +471,7 @@ const Home = (props) => {
           }
           .home-iframe {
             width: 1050px;
-            height: 1060px;
+            height: 900px;
             border-radius: var(--dl-radius-radius-radius8);
             padding: var(--dl-space-space-halfunit);
             border-color: #266d86;
