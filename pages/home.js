@@ -135,7 +135,7 @@ const Home = (props) => {
         <div className="home-container05">
           <iframe
             src="https://bajaserver-ashleymjohnson00-baja.vercel.app/image"
-            width="100%" height="100%" 
+            width="1000px" height="1000px" 
             allowFullScreen
             className="home-iframe"
           ></iframe>
