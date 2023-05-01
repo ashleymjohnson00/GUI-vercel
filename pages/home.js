@@ -160,11 +160,11 @@ const Home = (props) => {
               </div>
               <div className="home-container11">
                 <div className="home-container12">
-                  <span className="home-text14">Camera Location:</span>
-                  <span className="home-text15">Lobby</span>
+                  <span className="home-text14">Timestamp:</span>
+                  <span className="home-text15">{}</span>
                 </div>
                 <div className="home-container13">
-                  <span className="home-text16">{}</span>
+                  <span className="home-text16">Lobby</span>
                 </div>
               </div>
             </div>
@@ -453,8 +453,9 @@ const Home = (props) => {
           }
           .home-iframe {
             width: 1050px;
-            height: 1075px;
+            height: 1060px;
             border-radius: var(--dl-radius-radius-radius8);
+            padding: var(--dl-space-space-halfunit);
             border-color: #266d86;
             border-width: 10px;
           }
