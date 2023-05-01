@@ -436,7 +436,7 @@ const Home = (props) => {
             left: 0px;
             width: 75%;
             bottom: 0px;
-            height: 1186px;
+            height: 2000px;
             display: flex;
             position: absolute;
             align-self: flex-start;
