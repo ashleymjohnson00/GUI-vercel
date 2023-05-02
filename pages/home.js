@@ -553,9 +553,8 @@ const Home = (props) => {
             width: 150px;
             height: 31px;
             text-align: center;
-            padding-top: 3px;
+           /*  padding-top: 3px; */
             border-width: 0px;
-            padding-left: auto;
             border-radius: var(--dl-radius-radius-radius8);
             /* padding-bottom: 3px; */
             background-color: var(--dl-color-logocolors-lightred);
