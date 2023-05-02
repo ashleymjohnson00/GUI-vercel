@@ -548,13 +548,9 @@ const Home = (props) => {
             background-color: #075874;
           }
           .alert-clear-button {
-            left: 0px;
             color: var(--dl-color-logocolors-origred);
-            right: 0px;
             width: 150px;
-            bottom: var(--dl-space-space-threeunits);
             height: 31px;
-            margin: auto;
             position: absolute;
             align-self: center;
             text-align: center;
