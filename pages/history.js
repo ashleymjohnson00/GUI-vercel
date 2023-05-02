@@ -2,6 +2,8 @@ import React from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
 
+/* history page is no longer being used -- could turn into a photo recall page in the future*/
+
 const History = (props) => {
   return (
     <>
@@ -64,7 +66,7 @@ const History = (props) => {
             className="history-image3"
           />
         </footer>
-      </main>
+      </main> {/* below is all of the styling sheet for the above components*/}
       <style jsx>
         {`
           .history-container {

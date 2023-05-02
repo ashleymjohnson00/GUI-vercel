@@ -1,5 +1,8 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 
+/* you probably shouldn't touch anything on this page */
+/* This file establishes font styles and formatting that will be used in the website */
+
 class CustomDocument extends Document {
   render() {
     return (
@@ -31,6 +34,7 @@ class CustomDocument extends Document {
             type="icon/png"
             sizes="32x32"
           ></link>
+          {/* Below uses link to online fonts I chose to match the fonts I used in the logo for th website so those are established here */}
           <link href="https://db.onlinewebfonts.com/c/9dc386ee004e5dab994028f74afb1694?family=Industry+Light" rel="stylesheet" type="text/css" data-tag="font"/>
           <link href="https://db.onlinewebfonts.com/c/d60b13a925ef3dfc380e1dcd4cc5673b?family=IndustryIncW00-Base" rel="stylesheet" type="text/css" data-tag="font"/>
           <link href="https://db.onlinewebfonts.com/c/31a8ba2c64a597c958690eb058997e94?family=Industry+Medium" rel="stylesheet" type="text/css" data-tag="font"/>

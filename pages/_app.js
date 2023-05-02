@@ -2,7 +2,7 @@ import "./style.css";
 import { ToastProvider } from "react-toast-notifications";
 import React from "react";
 
-
+/* this file basically establishes some components for all the pages like the toaster notifications */
 function MyApp({ Component, pageProps }) {
   return (
     <ToastProvider autoDismiss={false} placement={'top-center'} newestOnTop={false}>
