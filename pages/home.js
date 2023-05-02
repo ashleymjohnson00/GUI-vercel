@@ -181,7 +181,7 @@ const Home = (props) => {
               <div className="home-container11">
                 <div className="home-container12">
                   <span className="home-text14">Timestamp:</span>
-                  <span className="home-text15">{}</span>
+                  <span className="home-text15">{ConfidenceInterval.slice(13,29)}</span>
                 </div>
                 <div className="home-container13">
                   <span className="home-text16">Location: Lobby</span>
