@@ -38,6 +38,7 @@ const Home = (props) => {
     updateTime.innerText = time.slice(1,29)
     console.log("refreshing")
     var photo = document.getElementById("threatPhoto")
+    removeToast(newToastwarn)
     photo.src = photo.src;
     
 
@@ -63,7 +64,6 @@ const Home = (props) => {
       setData(ConfidenceInterval)
       console.log("The threat data:", ConfidenceInterval.slice(1))
       if(ConfidenceInterval != previousConfidence){
-        removeToast(newToastwarn)
         addToast("Warning: Threat Detected!", { appearance: "error" }, newToastwarn)
         var timeStamp = splitFetch[1] + splitFetch[2]
         addUpdateConfidence(splitFetch[0], timeStamp)
