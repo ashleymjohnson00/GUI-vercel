@@ -557,7 +557,7 @@ const Home = (props) => {
             border-width: 0px;
             padding-left: auto;
             border-radius: var(--dl-radius-radius-radius8);
-            padding-bottom: 3px;
+            /* padding-bottom: 3px; */
             background-color: var(--dl-color-logocolors-lightred);
             box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.28);
           }
