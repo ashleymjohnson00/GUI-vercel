@@ -23,8 +23,16 @@ const Home = (props) => {
     return new Promise( res=> setTimeout(res,delay))
   }
   async function addUpdateConfidence(confidence,time){
-    
-    
+    const threshold = document.getElementById('threshold')
+    const thresholdValue = threshold.value
+    console.log("this is the theshold value",thresholdValue)
+    const floatConfidence = parseFloat(confidence.slice(1))
+    console.log("converted confidence",floatConfidence)
+    if(thresholdValue > floatConfidence){
+      return ;
+    }
+    else{
+    addToast("Warning: Threat Detected!", { appearance: "error" })
     const locationOfNewUpdate = document.getElementById("Updates-Sidebar")
     const newUpdateBlock = document.createElement('div')
     const updateConfidence = document.createElement('div')
@@ -50,6 +58,7 @@ const Home = (props) => {
     newUpdateBlock.insertAdjacentElement('afterbegin', updateTime)
     newUpdateBlock.insertAdjacentElement('afterbegin', newThreat)
     console.log('test to see', timestamp)
+    }
   }
 
   const router = useRouter();
@@ -67,7 +76,6 @@ const Home = (props) => {
       setData(ConfidenceInterval)
       console.log("The threat data:", ConfidenceInterval.slice(1))
       if(ConfidenceInterval != previousConfidence){
-        addToast("Warning: Threat Detected!", { appearance: "error" })
         var timeStamp = splitFetch[1] + splitFetch[2]
         addUpdateConfidence(splitFetch[0], timeStamp)
         global.time = splitFetch[1]
@@ -167,6 +175,7 @@ const Home = (props) => {
                 <br></br>
                 <div className="home-container10">
                 <input
+                  id = "threshold"
                   type="number"
                   max="100"
                   min="0"
