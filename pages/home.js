@@ -29,13 +29,16 @@ const Home = (props) => {
     const newUpdateBlock = document.createElement('div')
     const updateConfidence = document.createElement('div')
     const updateTime = document.createElement('div')
+    const newThreat = document.createElement('div')
 
     newUpdateBlock.id = "alert-container1"
-    newUpdateBlock.className = "jsx-e7eb81543aeba56e home-container04 textarea"
-    updateConfidence.className = 'jsx-e7eb81543aeba56e'
-    updateConfidence.innerText = confidence.slice(1)
-    updateTime.className = 'home-text01'
-    updateTime.innerText = time.slice(1,29)
+    newUpdateBlock.className = "jsx-901ff01498e3be2b  home-container04 textarea"
+    updateConfidence.className = 'jsx-901ff01498e3be2b  home-text02'
+    updateConfidence.innerText = ("Confidence Level: " + confidence.slice(1))
+    updateTime.className = 'jsx-901ff01498e3be2b  home-text03'
+    updateTime.innerText = ( time.slice(1,29))
+    newThreat.innerText = ("Time Stamp:")
+    newThreat.className = 'jsx-901ff01498e3be2b  home-text01'
     console.log("refreshing")
     var photo = document.getElementById("threatPhoto")
     photo.src = photo.src;
@@ -45,6 +48,7 @@ const Home = (props) => {
     locationOfNewUpdate.insertAdjacentElement('beforeend', newUpdateBlock)
     newUpdateBlock.insertAdjacentElement('beforeend', updateConfidence)
     newUpdateBlock.insertAdjacentElement('afterbegin', updateTime)
+    newUpdateBlock.insertAdjacentElement('afterbegin', newThreat)
     console.log('test to see', timestamp)
   }
 
@@ -181,7 +185,7 @@ const Home = (props) => {
               <div className="home-container11">
                 <div className="home-container12">
                   <span className="home-text14">Timestamp:</span>
-                  <span className="home-text15">{ConfidenceInterval.slice(13,29)}</span>
+                  <span className="home-text15">{ConfidenceInterval.slice(13,42)}</span>
                 </div>
                 <div className="home-container13">
                   <span className="home-text16">Location: Lobby</span>
@@ -451,6 +455,17 @@ const Home = (props) => {
             font-size: 18px;
             text-align: center;
           }
+          .home-text03 {
+            left: 0px;
+            color: var(--dl-color-logocolors-lightblue3);
+            right: 0px;
+            top: 10px;
+            margin: var(--dl-space-space-unit);
+            position: absolute;
+            font-size: 18px;
+            text-align: center;
+          }
+          
           .home-container05 {
             top: 0px;
             left: 0px;
@@ -590,7 +605,10 @@ const Home = (props) => {
             display: flex;
             align-items: center;
             border-radius: var(--dl-radius-radius-radius8);
+            padding-left: var(--dl-space-space-unit);
+            padding-right: var(--dl-space-space-unit);
             margin-bottom: var(--dl-space-space-unit);
+            text-align: center;
             flex-direction: column;
             justify-content: center;
             background-color: #075874;
