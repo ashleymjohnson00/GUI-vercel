@@ -669,6 +669,25 @@ const Home = (props) => {
             justify-content: space-between;
             background-color: var(--dl-color-gray-white);
           }
+          .update-info-link5 {
+            left: 0px;
+            color: var(--dl-color-logocolors-origred);
+            right: 0px;
+            width: 323px;
+            bottom: var(--dl-space-space-threeunits);
+            height: 31px;
+            margin: auto;
+            position: absolute;
+            align-self: center;
+            text-align: center;
+            padding-top: 3px;
+            border-color: var(--dl-color-logocolors-origred);
+            border-width: 2px;
+            padding-left: auto;
+            border-radius: var(--dl-radius-radius-radius8);
+            padding-bottom: var(--dl-space-space-halfunit);
+            background-color: var(--dl-color-gray-white);
+          }
           .home-image3 {
             width: var(--dl-size-size-large);
             object-fit: cover;
