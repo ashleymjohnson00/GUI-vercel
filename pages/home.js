@@ -172,7 +172,7 @@ const Home = (props) => {
                   min="0"
                   name="confidence interval"
                   step="1"
-                  placeholder="XX %"
+                  placeholder=".XX"
                   className="update-info-textinput input"
                   margin="25px"
                 />
