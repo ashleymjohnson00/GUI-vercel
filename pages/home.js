@@ -176,11 +176,11 @@ const Home = (props) => {
                   className="update-info-textinput input"
                   margin="25px"
                 />
+                </div>
                 <br></br>
                 <button name="alert clear button" onClick={() => removeAllToasts()}>
-                  <a className="update-info-link5 button heading2">Clear Alerts</a>
+                  <a className="alert-clear-button button heading2">Clear Alerts</a>
                 </button>
-                </div>
               </div>
               <div className="home-container11">
                 <div className="home-container12">
@@ -563,6 +563,18 @@ const Home = (props) => {
             justify-content: flex-start;
             background-color: #075874;
           }
+          .alert-clear-button {
+            color: var(--dl-color-gray-white);
+            width: 150px;
+            height: 31px;
+            text-align: center;
+           /*  padding-top: 3px; */
+            border-width: 0px;
+            border-radius: var(--dl-radius-radius-radius8);
+            padding-bottom: 2px; 
+            background-color: var(--dl-color-logocolors-lightred);
+            box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.28);
+          }
           .home-text13 {
             color: var(--dl-color-gray-white);
             font-size: 20px;
@@ -685,25 +697,6 @@ const Home = (props) => {
             padding-right: var(--dl-space-space-threeunits);
             padding-bottom: var(--dl-space-space-twounits);
             justify-content: space-between;
-            background-color: var(--dl-color-gray-white);
-          }
-          .update-info-link5 {
-            left: 0px;
-            color: var(--dl-color-logocolors-origred);
-            right: 0px;
-            width: 323px;
-            bottom: var(--dl-space-space-threeunits);
-            height: 31px;
-            margin: auto;
-            position: absolute;
-            align-self: center;
-            text-align: center;
-            padding-top: 3px;
-            border-color: var(--dl-color-logocolors-origred);
-            border-width: 2px;
-            padding-left: auto;
-            border-radius: var(--dl-radius-radius-radius8);
-            padding-bottom: var(--dl-space-space-halfunit);
             background-color: var(--dl-color-gray-white);
           }
           .home-image3 {
