@@ -49,7 +49,7 @@ const Home = (props) => {
   }
 
   const router = useRouter();
-  const { addToast } = useToasts();
+  const { addToast, removeToast, removeAllToasts } = useToasts();
   const previousConfidence = ""
   const [ConfidenceInterval, setData] = useState([{}]);
   useEffect(() => {
@@ -63,7 +63,8 @@ const Home = (props) => {
       setData(ConfidenceInterval)
       console.log("The threat data:", ConfidenceInterval.slice(1))
       if(ConfidenceInterval != previousConfidence){
-        addToast("Warning: Threat Detected!", { appearance: "error" }/* , { autoDismiss: "True"}, {autoDismissTimeout: "20000"} */)
+        removeToast()
+        addToast("Warning: Threat Detected!", { appearance: "error" })
         var timeStamp = splitFetch[1] + splitFetch[2]
         addUpdateConfidence(splitFetch[0], timeStamp)
         global.time = splitFetch[1]
@@ -469,7 +470,7 @@ const Home = (props) => {
           }
           .home-iframe {
             width: 1050px;
-            height: 700px;
+            height: 1000px;
             border-radius: var(--dl-radius-radius-radius8);
             padding: var(--dl-space-space-halfunit);
             border-color: #266d86;
