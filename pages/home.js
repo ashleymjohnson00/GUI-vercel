@@ -63,7 +63,7 @@ const Home = (props) => {
       setData(ConfidenceInterval)
       console.log("The threat data:", ConfidenceInterval.slice(1))
       if(ConfidenceInterval != previousConfidence){
-        addToast("Warning: Threat Detected!", { appearance: "error" }, { autoDismiss: "True"}, {autoDismissTimeout: "20000"})
+        addToast("Warning: Threat Detected!", { appearance: "error" }/* , { autoDismiss: "True"}, {autoDismissTimeout: "20000"} */)
         var timeStamp = splitFetch[1] + splitFetch[2]
         addUpdateConfidence(splitFetch[0], timeStamp)
         global.time = splitFetch[1]
