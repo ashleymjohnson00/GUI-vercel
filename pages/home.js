@@ -553,20 +553,11 @@ const Home = (props) => {
             font-size: 20px;
             margin-top: var(--dl-space-space-oneandhalfunits);
           }
-          .home-container10 {
-            flex: 0 0 auto;
-            width: auto;
-            height: auto;
-            display: flex;
-            margin-top: var(--dl-space-space-halfunit);
-            align-items: flex-start;
-            justify-content: center;
-          }
           .alert-clear-button {
             left: 0px;
             color: var(--dl-color-logocolors-origred);
             right: 0px;
-            width: 323px;
+            width: 100px;
             bottom: var(--dl-space-space-threeunits);
             height: 31px;
             margin: auto;
@@ -580,6 +571,15 @@ const Home = (props) => {
             border-radius: var(--dl-radius-radius-radius8);
             padding-bottom: var(--dl-space-space-halfunit);
             background-color: var(--dl-color-gray-white);
+          }
+          .home-container10 {
+            flex: 0 0 auto;
+            width: auto;
+            height: auto;
+            display: flex;
+            margin-top: var(--dl-space-space-halfunit);
+            align-items: flex-start;
+            justify-content: center;
           }
           .home-image1 {
             width: 100px;
