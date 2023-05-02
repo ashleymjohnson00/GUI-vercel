@@ -173,10 +173,10 @@ const Home = (props) => {
                   margin="25px"
                 />
                 <br></br>
+                </div>
                 <button name="alert clear button" onClick={() => removeAllToasts()}>
                   <a className="alert-clear-button button heading2">Clear Alerts</a>
                 </button>
-              </div>
               </div>
               <div className="home-container11">
                 <div className="home-container12">
