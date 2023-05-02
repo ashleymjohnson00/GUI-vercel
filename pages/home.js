@@ -554,10 +554,12 @@ const Home = (props) => {
             height: 31px;
             text-align: center;
             padding-top: 3px;
+            border-width: 0px;
             padding-left: auto;
             border-radius: var(--dl-radius-radius-radius8);
-            padding-bottom: var(--dl-space-space-halfunit);
+            padding-bottom: 3px;
             background-color: var(--dl-color-logocolors-lightred);
+            box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.28);
           }
           .home-text13 {
             color: var(--dl-color-gray-white);
