@@ -40,13 +40,13 @@ const Home = (props) => {
     const newThreat = document.createElement('div')
 
     newUpdateBlock.id = "alert-container1"
-    newUpdateBlock.className = "jsx-901ff01498e3be2b  home-container04 textarea"
-    updateConfidence.className = 'jsx-901ff01498e3be2b  home-text02'
+    newUpdateBlock.className = "jsx-613f06f63f9e2d7b  home-container04 textarea"
+    updateConfidence.className = 'jjsx-613f06f63f9e2d7b  home-text02'
     updateConfidence.innerText = ("Confidence Level: " + confidence.slice(1))
-    updateTime.className = 'jsx-901ff01498e3be2b  home-text03'
+    updateTime.className = 'jsx-613f06f63f9e2d7b  home-text03'
     updateTime.innerText = ( time.slice(1,29))
     newThreat.innerText = ("Time Stamp:")
-    newThreat.className = 'jsx-901ff01498e3be2b  home-text01'
+    newThreat.className = 'jsx-613f06f63f9e2d7b home-text01'
     console.log("refreshing")
     var photo = document.getElementById("threatPhoto")
     photo.src = photo.src;
