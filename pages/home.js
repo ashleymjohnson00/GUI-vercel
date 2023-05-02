@@ -172,6 +172,10 @@ const Home = (props) => {
                   className="update-info-textinput input"
                   margin="25px"
                 />
+                <br></br>
+                <button name="alert clear button" onClick={() => removeAllToasts()}>
+                  <a className="update-info-link5 button heading2">Clear Alerts</a>
+                </button>
                 </div>
               </div>
               <div className="home-container11">
