@@ -162,6 +162,9 @@ const Home = (props) => {
                 <span className="home-text13">Alert Controls</span>
                 <br></br>
                 <div className="home-container10">
+                <button name="alert clear button" onClick={() => removeAllToasts()}>
+                  <a className="alert-clear-button button heading2">Clear Alerts</a>
+                </button>
                 <input
                   type="number"
                   max="100"
@@ -172,11 +175,7 @@ const Home = (props) => {
                   className="update-info-textinput input"
                   margin="25px"
                 />
-                <br></br>
-                <button name="alert clear button" onClick={() => removeAllToasts()}>
-                  <a className="alert-clear-button button heading2">Clear Alerts</a>
-                </button>
-                </div>
+              </div>
               </div>
               <div className="home-container11">
                 <div className="home-container12">
@@ -557,7 +556,7 @@ const Home = (props) => {
             left: 0px;
             color: var(--dl-color-logocolors-origred);
             right: 0px;
-            width: 100px;
+            width: 200px;
             bottom: var(--dl-space-space-threeunits);
             height: 31px;
             margin: auto;
