@@ -556,7 +556,7 @@ const Home = (props) => {
            /*  padding-top: 3px; */
             border-width: 0px;
             border-radius: var(--dl-radius-radius-radius8);
-            /* padding-bottom: 3px; */
+            padding-bottom: 2px; 
             background-color: var(--dl-color-logocolors-lightred);
             box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.28);
           }
