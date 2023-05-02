@@ -547,16 +547,11 @@ const Home = (props) => {
             justify-content: flex-start;
             background-color: #075874;
           }
-          .home-text13 {
-            color: var(--dl-color-gray-white);
-            font-size: 20px;
-            margin-top: var(--dl-space-space-oneandhalfunits);
-          }
           .alert-clear-button {
             left: 0px;
             color: var(--dl-color-logocolors-origred);
             right: 0px;
-            width: 200px;
+            width: 150px;
             bottom: var(--dl-space-space-threeunits);
             height: 31px;
             margin: auto;
@@ -570,6 +565,11 @@ const Home = (props) => {
             border-radius: var(--dl-radius-radius-radius8);
             padding-bottom: var(--dl-space-space-halfunit);
             background-color: var(--dl-color-gray-white);
+          }
+          .home-text13 {
+            color: var(--dl-color-gray-white);
+            font-size: 20px;
+            margin-top: var(--dl-space-space-oneandhalfunits);
           }
           .home-container10 {
             flex: 0 0 auto;
