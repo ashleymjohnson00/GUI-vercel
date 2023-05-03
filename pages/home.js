@@ -172,7 +172,7 @@ const Home = (props) => {
             width="100%" height="100%" 
             allowFullScreen
             className="home-iframe"
-            scrolling="no"
+            //scrolling="no"
           ></img>
           <div className="home-container06">
             <div className="home-container07">
