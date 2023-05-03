@@ -165,15 +165,15 @@ const Home = (props) => {
           </div>
         </div>
         <div className="home-container05">
-          <img
+          <iframe
             name='threatPhoto'
             id ="threatPhoto"
             src= ""   
             width="100%" height="100%" 
             allowFullScreen
             className="home-iframe"
-            //scrolling="no"
-          ></img>
+            scrolling="no"
+          ></iframe>
           <div className="home-container06">
             <div className="home-container07">
               <span className="home-text07">
