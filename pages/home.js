@@ -98,7 +98,15 @@ const Home = (props) => {
     
    },[]
   )
- 
+ async function removeAlerts(){
+  try{
+  const updates = document.getElementById('alert-container1')
+  updates.remove()
+  }
+  catch (error){
+    console.log(error)
+  }
+ }
   
   return (
     <>
@@ -189,6 +197,9 @@ const Home = (props) => {
                 <br></br>
                 <button name="alert clear button" onClick={() => removeAllToasts()}>
                   <a className="alert-clear-button button heading2">Clear Alerts</a>
+                </button>
+                <button name= "clearUpdates" onClick={() =>removeAlerts()}>
+                  <a className='alert-clear-button button heading2'>Clear Updates</a>
                 </button>
               </div>
               <div className="home-container11">
