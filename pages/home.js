@@ -201,7 +201,6 @@ const Home = (props) => {
                   margin="25px"
                 />
                 </div>
-                <br></br>
                 <button name="alert clear button" onClick={() => removeAllToasts()}>
                   <a className="alert-clear-button button heading2">Clear Alerts</a>
                 </button>
