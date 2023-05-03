@@ -604,7 +604,7 @@ const Home = (props) => {
           .home-text13 {
             color: var(--dl-color-gray-white);
             font-size: 20px;
-            margin-top: var(--dl-space-space-oneandhalfunits);
+            margin-top: var(--dl-space-space-unit);
           }
           .home-container10 {
             flex: 0 0 auto;
