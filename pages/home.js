@@ -165,7 +165,7 @@ const Home = (props) => {
           </div>
         </div>
         <div className="home-container05">
-          <iframe
+          <img
             name='threatPhoto'
             id ="threatPhoto"
             src= ""   
@@ -173,7 +173,7 @@ const Home = (props) => {
             allowFullScreen
             className="home-iframe"
             scrolling="no"
-          ></iframe>
+          ></img>
           <div className="home-container06">
             <div className="home-container07">
               <span className="home-text07">
