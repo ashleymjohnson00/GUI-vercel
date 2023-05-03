@@ -188,7 +188,6 @@ const Home = (props) => {
             <div className="home-container08">
               <div className="home-container09">
                 <span className="home-text13">Alert Controls</span>
-                <br></br>
                 <div className="home-container10">
                 <input
                   id = "threshold"
