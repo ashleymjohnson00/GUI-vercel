@@ -9,6 +9,7 @@ import { useRouter } from 'next/router';
 
 
 
+
 const Home = (props) => {
   async function addUpdateTime(time){
     // const location = document.getElementById("alert-container")
@@ -23,9 +24,8 @@ const Home = (props) => {
     return new Promise( res=> setTimeout(res,delay))
   }
   async function addUpdateConfidence(confidence,time){
-    var photo = document.getElementById("threatPhoto")
-    photo.src = photo.src;
-    timeout(100)
+    /* var photo = document.getElementById("threatPhoto")
+    photo.src = photo.src; */
     const threshold = document.getElementById('threshold')
     const thresholdValue = threshold.value
     console.log("this is the theshold value",thresholdValue)
@@ -76,7 +76,11 @@ const Home = (props) => {
       const splitFetch = ConfidenceInterval.split(',')
       console.log("split fetch",splitFetch)
       setData(ConfidenceInterval)
-      console.log("The threat data:", ConfidenceInterval.slice(1))
+      const photoURI = splitFetch[3].slice(1,(splitFetch[3].length)-3).trim().replace("]", '')
+      console.log(photoURI)
+      console.log(splitFetch[3].length)
+      document.getElementById('threatPhoto').src = "data:image/jpg;base64, " + photoURI
+      console.log(splitFetch[3].slice(1,(splitFetch[3].length)-3))
       if(ConfidenceInterval != previousConfidence){
         var timeStamp = splitFetch[1] + splitFetch[2]
         addUpdateConfidence(splitFetch[0], timeStamp)
@@ -86,7 +90,7 @@ const Home = (props) => {
       previousConfidence = ConfidenceInterval
      
 
-    }).catch(err => console.log("Failed to reach server"))
+    }).catch(err => console.log(err))
   }, 500);
 },[])
 
@@ -102,9 +106,10 @@ const Home = (props) => {
   )
  async function removeAlerts(){
   try{
-  
-    const updates = document.getElementsByClassName('jsx-613f06f63f9e2d7b  home-container04 textarea')
-    updates.remove()
+    while(document.getElementById('alert-container1') != null){
+      const updates = document.getElementById('alert-container1')
+      updates.remove()
+  }
   }
   catch (error){
     console.log(error)
@@ -163,11 +168,11 @@ const Home = (props) => {
           <iframe
             name='threatPhoto'
             id ="threatPhoto"
-            src= "https://bajaserver-ashleymjohnson00-baja.vercel.app/image"
+            src= ""   
             width="100%" height="100%" 
             allowFullScreen
             className="home-iframe"
-            scrolling="no"
+            //scrolling="no"
           ></iframe>
           <div className="home-container06">
             <div className="home-container07">
