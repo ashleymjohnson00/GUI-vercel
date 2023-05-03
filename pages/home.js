@@ -23,6 +23,9 @@ const Home = (props) => {
     return new Promise( res=> setTimeout(res,delay))
   }
   async function addUpdateConfidence(confidence,time){
+    var photo = document.getElementById("threatPhoto")
+    photo.src = photo.src;
+    timeout(100)
     const threshold = document.getElementById('threshold')
     const thresholdValue = threshold.value
     console.log("this is the theshold value",thresholdValue)
@@ -48,8 +51,7 @@ const Home = (props) => {
     newThreat.innerText = ("Time Stamp:")
     newThreat.className = 'jsx-613f06f63f9e2d7b home-text01'
     console.log("refreshing")
-    var photo = document.getElementById("threatPhoto")
-    photo.src = photo.src;
+   
     
 
     console.log("current confidence",confidence)
@@ -100,8 +102,9 @@ const Home = (props) => {
   )
  async function removeAlerts(){
   try{
-  const updates = document.getElementById('alert-container1')
-  updates.remove()
+  
+    const updates = document.getElementsByClassName('jsx-613f06f63f9e2d7b  home-container04 textarea')
+    updates.remove()
   }
   catch (error){
     console.log(error)
@@ -161,7 +164,7 @@ const Home = (props) => {
             name='threatPhoto'
             id ="threatPhoto"
             src= "https://bajaserver-ashleymjohnson00-baja.vercel.app/image"
-            width="100%" height="50%" 
+            width="100%" height="100%" 
             allowFullScreen
             className="home-iframe"
             scrolling="no"
@@ -205,7 +208,7 @@ const Home = (props) => {
               <div className="home-container11">
                 <div className="home-container12">
                   <span className="home-text14">Timestamp:</span>
-                  <span className="home-text15">{ConfidenceInterval.slice(13,42)}</span>
+                  <span className="home-text15">{ConfidenceInterval.slice(11,40)}</span>
                 </div>
                 <div className="home-container13">
                   <span className="home-text16">Location: Lobby</span>
