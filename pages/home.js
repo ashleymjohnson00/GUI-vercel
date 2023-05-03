@@ -59,7 +59,7 @@ const Home = (props) => {
     newUpdateBlock.insertAdjacentElement('beforeend', updateConfidence)
     newUpdateBlock.insertAdjacentElement('afterbegin', updateTime)
     newUpdateBlock.insertAdjacentElement('afterbegin', newThreat)
-    console.log('test to see', timestamp)
+    console.log('test', timestamp)
     }
   }
 
